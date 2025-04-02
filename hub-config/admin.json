@@ -6,29 +6,12 @@
         "name": "COVID-19 Scenario Modeling Hub Coordination Team",
         "email": "scenariohub@midasnetwork.us"
     },
-    "repository_url": {
+    "repository": {
         "host": "github",
         "owner": "midas-network",
         "name": "covid19-scenario-modeling-hub"
     },
-    "hub_models": [
-        {
-            "team_abbr": "",
-            "model_abbr": "Ensemble",
-            "model_type": "ensemble"
-        },
-        {
-            "team_abbr": "",
-            "model_abbr": "Ensemble_LOP",
-            "model_type": "ensemble"
-        },
-        {
-            "team_abbr": "",
-            "model_abbr": "Ensemble_LOP_untrimmed",
-            "model_type": "ensemble"
-        }
-    ],
-    "file_format":["parquet", "gz.parquet"],
+    "file_format":["parquet"],
     "timezone": "US/Eastern",
     "model_output_dir": "model-output"
 }
