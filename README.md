@@ -376,7 +376,7 @@ metadata and abstract.***
 -   **End date for fitting data**: April 26, 2025 (no later than April
     26, no earlier than April 20)
 
--   **Start date for scenarios**: April 27, 2024 (first date of
+-   **Start date for scenarios**: April 27, 2025 (first date of
     simulated transmission/outcomes)
 
 -   **Simulation end date:** April 25, 2025 (52-week horizon)
