@@ -313,9 +313,9 @@ A-2023-04-16.
 ### `location`
 
 Values in the `location` column must be one of the "locations" in this
-[FIPS numeric code file](../data-locations/locations.csv) which includes
-numeric FIPS codes for U.S. states, counties, territories, and districts as
-well as "US" for national scenarios. 
+[FIPS numeric code file](../auxiliary-data/data-locations/locations.csv) which 
+includes numeric FIPS codes for U.S. states, territories aswell as "US" for
+national scenarios. 
 
 Please note that when writing FIPS codes, they should be written in as a 
 character string to preserve any leading zeroes.
