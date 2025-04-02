@@ -69,6 +69,10 @@ alignment of model projections for collective insights. Scenarios have
 been designed in consultation with academic modeling teams and
 government agencies (e.g., CDC).
 
+This repository follows the guidelines and standards outlined by the 
+[hubverse](https://hubverse.io), which provides a set of data formats
+and open source tools for modeling hubs.
+
 ## How to participate
 
 The COVID-19 Scenario Modeling Hub is be open to any team willing to
@@ -372,7 +376,7 @@ metadata and abstract.***
 -   **End date for fitting data**: April 26, 2025 (no later than April
     26, no earlier than April 20)
 
--   **Start date for scenarios**: April 27, 2024 (first date of
+-   **Start date for scenarios**: April 27, 2025 (first date of
     simulated transmission/outcomes)
 
 -   **Simulation end date:** April 25, 2025 (52-week horizon)
