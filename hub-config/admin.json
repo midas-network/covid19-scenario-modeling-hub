@@ -28,7 +28,7 @@
             "model_type": "ensemble"
         }
     ],
-    "file_format":["parquet", "gz.parquet", "csv", "zip"],
+    "file_format":["parquet", "gz.parquet"],
     "timezone": "US/Eastern",
     "model_output_dir": "model-output"
 }
