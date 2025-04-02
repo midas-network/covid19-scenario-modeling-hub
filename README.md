@@ -69,6 +69,10 @@ alignment of model projections for collective insights. Scenarios have
 been designed in consultation with academic modeling teams and
 government agencies (e.g., CDC).
 
+This repository follows the guidelines and standards outlined by the 
+[hubverse](https://hubverse.io), which provides a set of data formats
+and open source tools for modeling hubs.
+
 ## How to participate
 
 The COVID-19 Scenario Modeling Hub is be open to any team willing to
