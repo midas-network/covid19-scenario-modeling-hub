@@ -1,2 +1,5 @@
 .DS_Store
 .Rproj.user
+.Rhistory
+covid19-scenario-modeling-hub.Rproj
+attic/*
