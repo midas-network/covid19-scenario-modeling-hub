@@ -3,7 +3,7 @@
 This folder is used to store additional information and data relevant to the 
 COVID-19 modeling efforts. 
 
-The information are organized in multiple sections:
+The data are organized in multiple sections:
 
 - [Hospitalization](./README.md#hospitalization)
 - [Wastewater](./README.md#wastewater)
@@ -12,7 +12,7 @@ The information are organized in multiple sections:
 - [Additional Resources](./README.md#additional-resources)
     - [MIDAS Network Curated Archive](./README.md#midas-network-curated-archive)
     
-If any issues, or questions, please feel free to 
+If there any issues, or questions, please feel free to 
 [open an issue](https://github.com/midas-network/covid19-scenario-modeling-hub/issues).
 If you want to contribute to the list of resources, please free to 
 [open an issue](https://github.com/midas-network/covid19-scenario-modeling-hub/issues) or
@@ -23,17 +23,17 @@ containing the information to add.
 
 Weekly Hospital Respiratory Data (HRD) Metrics by Jurisdiction from
 the [National Healthcare Safety Network (NHSN)](https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/ua7e-t2fy/about_data) 
-are used for incidence hospitalization target. 
-However, from May 2024 to November 2024, data report was voluntary. As a results, 
+are used for incidence hospitalization targets 
+However, data reporting was voluntary  from May 2024 to November 2024. As a results, 
 during this period some locations had less than 75% hospital reporting. The
 observations associated with less than 75% hospital reporting are removed from
 the target data.
 
-To complete this gap, we collected information from local state authority, when
-available, are aggregate them in the same format as the target data, except from
+To complete this gap, we collected information from local state authorities.  When
+available these data are aggregate them in the same format as the target data, except from
 Arkansas who reported monthly information.
 
-The results will be posted soon in an hospitalization subfolder containing: the 
+The results will be posted soon in an hospitalization subfolder containing the 
 source data, the code to reproduce the results and visualization comparison
 with the NHSN data. 
 
@@ -149,7 +149,7 @@ with the NHSN data.
 The folder [data-locations/](./.) contains two `csv` files:
 
 - [locations.csv](./locations.csv) containing
-  the state and national full name, 2 letter abbreviation and fips code as used 
+  the state and national  names, 2 letter abbreviation and fips code as used 
   in the hub. The file also contains the population size. 
 - [locations_2022.csv](./locations_2022.csv) 
   contains the population size per age group, state (and national level), from
