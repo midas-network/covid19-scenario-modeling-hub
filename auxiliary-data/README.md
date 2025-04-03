@@ -45,6 +45,7 @@ with the NHSN data.
 | US             | [WastewaterSCAN](https://data.wastewaterscan.org/tracker/?charts=CjIQACABSABaBk4gR2VuZXIKMjAyNS0wMi0xN3IKMjAyNS0wMy0zMYoBBjk5MGE5N8ABAQ%3D%3D&selectedChartId=990a97) |
 | US             | [NWSS - Wastewater Surveillance](https://covid.cdc.gov/covid-data-tracker/#wastewater-surveillance) |
 | California     | [CDPH California Surveillance of Wastewaters (Cal-SuWers) ](https://skylab.cdph.ca.gov/calwws/) |
+| California     | [COVID-19 Sewershed Restricted Case Data ](https://data.chhs.ca.gov/dataset/covid-19-sewershed-restricted-case-data) |
 | Colorado       | [CDPHE Colorado Wastewater Surveillance Data](https://data-cdphe.opendata.arcgis.com/datasets/54a508b3c9c543559a367054fc956e6d_0/explore)|
 | Connecticut    | [Weekly Respiratory Viral Disease Update - Wastewater Surveillance](https://app.powerbigov.us/view?r=eyJrIjoiOWNmYzZmZWUtNjRlMy00ZDc5LWE5YzMtYTY2YzVjNmE1NGU4IiwidCI6IjExOGI3Y2ZhLWEzZGQtNDhiOS1iMDI2LTMxZmY2OWJiNzM4YiJ9)|
 | Georgia        | [GA NWSS Wastewater Surveillance Reports](https://dph.georgia.gov/ga-nwss-wastewater-surveillance-reports) |
@@ -72,8 +73,21 @@ with the NHSN data.
 
 ### Other Topics of Interest
 
-| State | Links | Available | Topics | Source |
+| Location | Links | Available | Topics | Source |
 |:---|:----------------|:--------|:----------------|:----------------|
+| US | [NSSP Emergency Department Visits - COVID-19, Flu, RSV, Combined – by Demographic Category](https://data.cdc.gov/Public-Health-Surveillance/NSSP-Emergency-Department-Visits-COVID-19-Flu-RSV-/7xva-uux8/about_data) | Directly Downloadable | Emergency Department Visits | Centers for Disease Control and Prevention (CDC) |
+| US | [NSSP Emergency Department Visit Trajectories by State and Sub State Regions- COVID-19, Flu, RSV, Combined](https://data.cdc.gov/Public-Health-Surveillance/NSSP-Emergency-Department-Visit-Trajectories-by-St/rdmq-nq56/about_data) | Directly Downloadable | Emergency Department Visits | Centers for Disease Control and Prevention (CDC) |
+| US | [Rates of Laboratory-Confirmed RSV, COVID-19, and Flu Hospitalizations from the RESP-NET Surveillance Systems](https://data.cdc.gov/Public-Health-Surveillance/Rates-of-Laboratory-Confirmed-RSV-COVID-19-and-Flu/kvib-3txy/about_data) | Directly Downloadable | Hospitalizations | Centers for Disease Control and Prevention (CDC), Respiratory Virus Hospitalization Surveillance Network (RESP-NET) |
+| US | [Provisional Percent of Deaths for COVID-19, Influenza, and RSV by Select Characteristics](https://data.cdc.gov/NCHS/Provisional-Percent-of-Deaths-for-COVID-19-Influen/53g5-jf7x/about_data) | Directly Downloadable | Deaths | Centers for Disease Control and Prevention (CDC), National Center for Health Statistics (NCHS) |
+| US | [Percent of Tests Positive for Viral Respiratory Pathogens](https://data.cdc.gov/Public-Health-Surveillance/Percent-of-Tests-Positive-for-Viral-Respiratory-Pa/seuz-s2cv/about_data) | Directly Downloadable | Tests | Centers for Disease Control and Prevention (CDC), NREVSS |
+| US | [Percent Positivity of COVID-19 Nucleic Acid Amplification Tests by HHS Region, National Respiratory and Enteric Virus Surveillance System](https://data.cdc.gov/Laboratory-Surveillance/Percent-Positivity-of-COVID-19-Nucleic-Acid-Amplif/gvsb-yw6g/about_data) | Directly Downloadable | Tests | Centers for Disease Control and Prevention (CDC) |
+| US | [Weekly Respiratory Virus Vaccination Data, Children 6 Months-17 Years and Adults 18 Years and Older, National Immunization Survey](https://data.cdc.gov/Vaccinations/Weekly-Respiratory-Virus-Vaccination-Data-Children/5c6r-xi2t/about_data) | Directly Downloadable | Vaccination; Age groups | Centers for Disease Control and Prevention (CDC) |
+| US | [Weekly Cumulative COVID-19 Vaccination Coverage and Intent, Overall, by Selected Demographics and Jurisdiction, Among Adults 18 Years and Older](https://data.cdc.gov/Vaccinations/Weekly-Cumulative-COVID-19-Vaccination-Coverage-an/ksfb-ug5d/about_data) | Directly Downloadable | Vaccination; Demographics | Centers for Disease Control and Prevention (CDC), National Center for Immunization and Respiratory Diseases (NCIRD) |
+| US | [Weekly Parental Intent for Vaccination and Cumulative Percentage of Children 6 Months -17 Years Who are Up to date with the COVID-19 Vaccines by Season, United States](https://data.cdc.gov/Child-Vaccinations/Weekly-Parental-Intent-for-Vaccination-and-Cumulat/ker6-gs6z/about_data) | Directly Downloadable | Vaccination; Demographics | Centers for Disease Control and Prevention (CDC), National Center for Immunization and Respiratory Diseases (NCIRD) |
+| US | [Weekly COVID-19 Vaccination Coverage Among Pregnant Women 18-49 Years, by Race and Ethnicity](https://data.cdc.gov/Pregnancy-Vaccination/Weekly-COVID-19-Vaccination-Coverage-Among-Pregnan/pvk6-8bzd/about_data) | Directly Downloadable | Vaccination; Demographics | Centers for Disease Control and Prevention (CDC), National Center for Immunization and Respiratory Diseases (NCIRD) |
+| US | [Monthly Cumulative Number and Percent of Persons Who Received 1+ 2024-25 COVID-19 Vaccination Doses, by Age Group, and Jurisdiction, United States](https://data.cdc.gov/Vaccinations/Monthly-Cumulative-Number-and-Percent-of-Persons-W/3bmy-cyyd/about_data) | Directly Downloadable | Vaccination; Demographics | Centers for Disease Control and Prevention (CDC), National Center for Immunization and Respiratory Diseases (NCIRD) |
+| US | [SARS-CoV-2 Variant Proportions](https://data.cdc.gov/Laboratory-Surveillance/SARS-CoV-2-Variant-Proportions/jr58-6ysp) | Directly Downloadable | Variants | Centers for Disease Control and Prevention (CDC), CORVD Laboratory Branch |
+| US | [Detect and analyze variants of SARS-CoV-2](https://cov-spectrum.org/explore/United%20States/AllSamples/Past6M) | Directly Downloadable | Variants | GISAID |
 | Alabama        | [Viral Respiratory Diseases](https://www.alabamapublichealth.gov/data/respiratory.html) | [MIDAS Catalog](https://catalog.midasnetwork.us/?object_id=1826)| Emergency Department Visits | Alabama Public Health |
 | Alaska*        | Respiratory Virus Snapshot | [MIDAS Catalog](https://catalog.midasnetwork.us/?object_id=1747) | Lab-Confirmed Cases; Virus Variants or Types; Emergency Department Visits | Alaska Department of Health |
 | Arkansas       | [COVID-19 Information](https://experience.arcgis.com/experience/3f35319c03b440d58cf402a4f4efad62/page/COVID-19?draft=true&views=COVID-19-Information) | [MIDAS Catalog](https://catalog.midasnetwork.us/?object_id=1646) | Hospitalizations; Cases; Deaths; Demographics | Arkansas Department of Health |
@@ -138,7 +152,7 @@ with the NHSN data.
 | Wisconsin      | [Immunizations: COVID-19 Vaccine Data](https://www.dhs.wisconsin.gov/immunization/covid-19-vaccine-data.htm) | Directly Downloadable | Vaccinations; Demographics | Wisconsin Department of Health Services |
 | Wisconsin      | [COVID-19, Influenza, and RSV-Associated Hospitalizations](https://www.dhs.wisconsin.gov/disease/respiratory-hospitalizations.htm) | - | Hospitalizations; Age Groups | Wisconsin Department of Health Services |
 | Wyoming        | [Respiratory Disease Dashboard](https://sites.google.com/wyo.gov/covid-19/home) | Directly Downloadable | Cases | Wyoming Department of Health |
-| Puerto Rico    | [https://datos.salud.pr.gov/covid-19/](https://datos.salud.pr.gov/covid-19/) | Directly Downloadable | Cases; Tests; Deaths; Hospitalizations; Vaccinations; Variants; Demographics | Puerto Rico Department of Health |
+| Puerto Rico    | [COVID-19 - Casos](https://datos.salud.pr.gov/covid-19/) | Directly Downloadable | Cases; Tests; Deaths; Hospitalizations; Vaccinations; Variants; Demographics | Puerto Rico Department of Health |
 
 * **Alaska**: Archived page
 * **District of Columbia**: New Hospitalization admissions set to 0 since beginning of 2024.
