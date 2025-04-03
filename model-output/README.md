@@ -95,7 +95,7 @@ arrow::read_parquet(filename)
 The date YYYY-MM-DD should correspond to the start date for scenarios
 projection ("first date of simulated transmission/outcomes" as noted in the
 scenario description on the main 
-[README, Submission Information](https://github.com/midas-network/rsv-scenario-modeling-hub)).
+[README, Submission Information](https://github.com/midas-network/covid19-scenario-modeling-hub/blob/main/README.md#submission-information)).
 
 The `team` and `model` in this file must match the `team` and `model` in the 
 directory this file is in. Both `team` and `model` should be less than 15 
@@ -220,10 +220,10 @@ Scenario IDs include a captitalized letter and date as YYYY-MM-DD, e.g.,
 The submission can contain multiple output type information: 
 - From 100 to 300 representative trajectories from the model simulations.
   We will call this format "sample" type output. For more information, please
-  consult the [sample](./model-output#sample) section.
+  consult the [sample](./README.md#sample) section.
 - A set of quantiles with an optional "mean" value for all the tarquets.
   We will call this format "quantile" type output. For more information, 
-  please consult the [quantile](./model-output#quantile) section. 
+  please consult the [quantile](./README.md#quantile) section. 
 
 The requested targets are (for "sample" type output):
 - weekly incident deaths
