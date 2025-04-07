@@ -5,6 +5,7 @@ COVID-19 modeling efforts.
 
 The data are organized in multiple sections:
 
+- [Vaccination Coverage](.README.md#vaccination-coverage)
 - [Hospitalization](./README.md#hospitalization)
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
@@ -18,6 +19,14 @@ If you want to contribute to the list of resources, please free to
 [open an issue](https://github.com/midas-network/covid19-scenario-modeling-hub/issues) or
 [open a Pull Request](https://github.com/midas-network/covid19-scenario-modeling-hub/pulls) 
 containing the information to add. 
+
+## Vaccination Coverage
+
+The folder [vaccination-coverage/](./vaccination-coverage/) contains round specific
+vaccination coverage data.
+
+The folder contains a [README](./vaccination-coverage/README.md) file with detailed 
+information for each file.
 
 ## Hospitalization
 

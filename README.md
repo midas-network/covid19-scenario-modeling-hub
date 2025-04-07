@@ -158,16 +158,19 @@ where vaccination is pushed 1.5 month earlier and starts on July 15, 2025 (meani
 that the entire vaccine manufacturing and delivery process is moved earlier in time). 
 These hypothetical scenarios may be useful to project the potential value of earlier 
 vaccination campaigns in future COVID19 seasons, in light of substantial summer 
-waves of COVID-19 observed in recent years.  Vaccine coverage curves will be 
-provided for all scenarios and will reflect the stipulated timing of vaccination 
-in each scenario. 
+waves of COVID-19 observed in recent years.  Vaccine coverage curves is 
+provided for all scenarios and reflects the stipulated timing of vaccination 
+in each scenario (available in the 
+[auxiliary-data/vaccination-coverage](./auxiliary-data/vaccination-coverage/) folder).
 
 
 #### **Vaccination Coverage**
 
-Vaccine coverage curves will be provided for all scenarios and will be extrapolated 
+Vaccine coverage curves is provided for all scenarios and will be extrapolated 
 from the 
 [2024-25 data](https://www.cdc.gov/covidvaxview/weekly-dashboard/adult-vaccination-coverage.html). 
+The data are available in the 
+[auxiliary-data/vaccination-coverage](./auxiliary-data/vaccination-coverage/) folder.
 
 *No recommendation (scenario A)*: There is no future recommendation to get additional 
 booster doses or receive additional vaccination. Teams should not model any future 
