@@ -5,7 +5,7 @@ COVID-19 modeling efforts.
 
 The data are organized in multiple sections:
 
-- [Vaccination Coverage](.README.md#vaccination-coverage)
+- [Vaccination Coverage](./README.md#vaccination-coverage)
 - [Hospitalization](./README.md#hospitalization)
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
