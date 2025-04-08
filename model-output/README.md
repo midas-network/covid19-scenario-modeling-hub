@@ -327,7 +327,7 @@ expected:
 `"US","06","08","09","13","24","26","27","35","36","41","47","49"`
 
 
-### `age_group ` 
+### `age_group` 
 
 Accepted values in the  `age_group` column are:
 
