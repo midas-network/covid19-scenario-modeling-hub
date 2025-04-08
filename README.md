@@ -382,7 +382,7 @@ metadata and abstract.***
 -   **Start date for scenarios**: April 27, 2025 (first date of
     simulated transmission/outcomes)
 
--   **Simulation end date:** April 25, 2025 (52-week horizon)
+-   **Simulation end date:** April 25, 2026 (52-week horizon)
 
 **Submission Target**
 
