@@ -169,6 +169,7 @@ The output file must contain eleven columns (in any order):
 - `target`
 - `horizon`
 - `location`
+- `age_group`
 - `output_type` 
 - `output_type_id` 
 - `value`
@@ -189,6 +190,7 @@ a particular date for a particular target.
 |`target`|character|
 |`horizon`|numeric, integer|
 |`location`|character|
+|`age_group`|character|
 |`output_type`|character| 
 |`output_type_id`|numeric, character, logical (if all `NA`)| 
 |`value`|numeric|
@@ -324,6 +326,14 @@ For the round 1, only the location included in RSV-NET target data are
 expected:
 `"US","06","08","09","13","24","26","27","35","36","41","47","49"`
 
+
+### `age_group ` 
+
+Accepted values in the  `age_group` column are:
+
+- "0-64" (required)
+- "65-130" (required)
+- "0-130" (required)
 
 
 ### `output_type`

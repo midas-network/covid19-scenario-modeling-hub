@@ -354,6 +354,12 @@ source of gold-standard death data. Note that NCHS data source counts deaths
 on the dates they occurred, not on the date they were reported. In accordance 
 with the data, the death target should give deaths on the date they occur.
 
+
+#### Age target
+
+Both weekly state- and national-level COVID-19 hospitalizations and deaths should 
+be provided for the following age groups: 0-64, 65+ and overall population
+
 #### Population
 
 Whether or not to include demographic dynamics (aging, birth) is at the 
@@ -394,7 +400,7 @@ metadata and abstract.***
 
 -   Simulation trajectories: We ask that teams submit a sample of 100 to 300
     simulation replicates.
--   Trajectories will need to be paired across horizon and scenarios.
+-   Trajectories will need to be paired across horizon, age groups and scenarios.
 -   Projection quantiles for incident outcomes are optional but encouraged. 
     Similarly projections of cumulative outcomes (either as quantiles or cumulative
     trajectories) are optional.
