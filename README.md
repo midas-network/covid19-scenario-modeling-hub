@@ -400,7 +400,8 @@ metadata and abstract.***
 
 -   Simulation trajectories: We ask that teams submit a sample of 100 to 300
     simulation replicates.
--   Trajectories will need to be paired across horizon, age groups and scenarios.
+-   Trajectories will need to be paired across horizons, age groups, targets,
+	and scenarios.
 -   Projection quantiles for incident outcomes are optional but encouraged. 
     Similarly projections of cumulative outcomes (either as quantiles or cumulative
     trajectories) are optional.
