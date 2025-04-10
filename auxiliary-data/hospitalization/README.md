@@ -73,7 +73,7 @@ the output folder:
 The **daily** data from those states have also been compared to **weekly** 
 admission from NSHN:
 
-![](./viz/Daily - All Location.png)
+<img src="./viz/Daily - All Location.png" width="1000" height="750"/>
 
 ### Different hospitalization representation
 
