@@ -10,7 +10,9 @@ Historical coverage is based on the
 [Children National Immunization Survey](https://data.cdc.gov/Child-Vaccinations/Weekly-Parental-Intent-for-Vaccination-and-Cumulat/ker6-gs6z/about_data)
 for the period  Sep 2024 to March 2025. Estimates have been extrapolated 
 and smoothed to provide  weekly data. This generates the data corresponding 
-to the "Scenario == Historic coverage" observations.
+to the "Scenario == Historic coverage" observations. THe `"Cum.Coverage.Percent"`
+column contains percent coverage data in percent, meaning `0.4` represents
+`0.4 %`, or in another example, `40` represents `40 %`.
 
 For Scenarios B & D, which represent the same timing of vaccination in 2025-26 
 as in 2024-2025 we shift the historic coverage estimates by 365 days
