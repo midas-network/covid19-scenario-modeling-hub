@@ -1,0 +1,8 @@
+# Packages required for the truth data update (update 20250313)
+dplyr
+httr
+jsonlite
+MMWRweek
+purrr
+stringr
+tidyr
