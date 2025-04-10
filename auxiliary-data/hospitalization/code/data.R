@@ -35,7 +35,6 @@ df_nhsn_m <- dplyr::mutate(df_nhsn, year = format(as.Date(date), "%Y"),
 
 df_st_tot <- data.frame()
 df_st_tot_other <- data.frame()
-df_st_tot_daily <- data.frame()
 
 ### Arizona -----
 
@@ -54,7 +53,7 @@ df_st <- read.csv("source/Arizona/Hosps_Epi_Curve_2024-11-29_052458.csv") |>
                         value = AGG.Suppression.Hosps.Epi.Curve..alias) |>
           dplyr::filter(value > 0) |>
           dplyr::select(date, value)) |>
-  st_output(source_name = "AZ DHS", location = "Arizona")
+  st_output(source_name = "AZ DHS", location_name = "Arizona")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Arizona")
@@ -69,7 +68,7 @@ df_st <-
   dplyr::mutate(date = as.Date(paste0(Year, "/", month, "/28"),
                                      "%Y/%B/%d")) |>
   dplyr::filter(date <= as.Date("2025-01-02")) |>
-  st_output(source_name = "AK DoH", location = "Arkansas")
+  st_output(source_name = "AK DoH", location_name = "Arkansas")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn_m, df_st, "Arkansas")
@@ -83,7 +82,7 @@ df_st <-
   dplyr::summarise(value = sum(hospitalized_covid_confirmed_patients),
                    .by = todays_date) |>
   aggreg_weekly_val("todays_date", "%m/%d/%Y") |>
-  st_output(source_name = "CA DoH", location = "California")
+  st_output(source_name = "CA DoH", location_name = "California")
 
 df_st_tot_other <- rbind(df_st_tot_other, df_st)
 simple_plot(df_st, "California")
@@ -94,7 +93,7 @@ df_st <-
   read.csv("source/Colorado/CDPHE_Viral_Respiratory_Hospital_Data.csv") |>
   dplyr::filter(subsection == "Historical Trends", pathogen == "COVID-19") |>
   dplyr::mutate(value = count_, date = as.Date(date, "%m/%d/%Y")) |>
-  st_output(source_name = "CDPHE", location = "Colorado")
+  st_output(source_name = "CDPHE", location_name = "Colorado")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Colorado")
@@ -108,7 +107,7 @@ df_st <-
   dplyr::filter(statistic == "Average Daily COVID-19 Hospital Admissions") |>
   dplyr::mutate(value = value * 7,
                 date = as.Date(paste0(year, "-", month, "-", day))) |>
-  st_output(source_name = "DE DHHS", location = "Delaware")
+  st_output(source_name = "DE DHHS", location_name = "Delaware")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Delaware")
@@ -122,7 +121,7 @@ df_st <-
   dplyr::filter(Syndromic.Surveillance.Respiratory.Category == "COVID-19") |>
   dplyr::mutate(date = as.Date(Week.Ending, "%m/%d/%Y"),
                 value = as.numeric(gsub("%", "", Total.Average)) / 100) |>
-  st_output(source_name = "IL HSS", location = "Illinois")
+  st_output(source_name = "IL HSS", location_name = "Illinois")
 
 simple_plot(df_st, "Illinois")
 df_st_tot_other <- rbind(df_st_tot_other, df_st)
@@ -142,7 +141,7 @@ df_st <-
           dplyr::mutate(value = `SUM.Count..alias`,
                         date = as.Date(`Week_Ending.value`)) |>
           dplyr::select(date, value)) |>
-  st_output(source_name = "KY PH", location = "Kentucky")
+  st_output(source_name = "KY PH", location_name = "Kentucky")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Kentucky")
@@ -153,7 +152,7 @@ df_st <-  read.csv("source/Maine/All_historical_2025-03-27_110900.csv") |>
   dplyr::filter(X == "Hospitalized COVID-19 Patients") |>
   tidyr::pivot_longer(-1, names_to = "date", values_to = "value") |>
   dplyr::mutate(date = as.Date(gsub("X", "", date), "%m.%d.%Y")) |>
-  st_output(source_name = "ME CDC", location = "Maine")
+  st_output(source_name = "ME CDC", location_name = "Maine")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Maine")
@@ -162,12 +161,11 @@ comp_plot(df_nhsn, df_st, "Maine")
 
 df_st <-
   read.csv("source/Maryland/MD_COVID-19_-_MASTER_Case_Tracker_20250325.csv") |>
-  dplyr::mutate(value = bedsTotal,
-                date = as.Date(ReportDate, "%m/%d/%Y")) |>
-  st_output(source_name = "MDH PHPA", location = "Maryland")
+  aggreg_weekly_val("ReportDate", "%m/%d/%Y", "bedsTotal") |>
+  st_output(source_name = "MDH PHPA", location_name = "Maryland")
 
-df_st_tot_daily <- rbind(df_st_tot_daily, df_st)
-comp_plot(df_nhsn, df_st, "Maryland")
+df_st_tot_other <- rbind(df_st_tot_other, df_st)
+simple_plot(df_st, "Maryland")
 
 ### Massachusetts ------
 
@@ -178,7 +176,7 @@ df_st <-
   dplyr::filter(Subgroup == "Statewide", `Visit type` == "Admissions") |>
   dplyr::mutate(value = `Number of COVID-19 visits`,
                 date = as.Date(`Week End Date`)) |>
-  st_output(source_name = "MA DPH", location = "Massachusetts")
+  st_output(source_name = "MA DPH", location_name = "Massachusetts")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Massachusetts")
@@ -188,7 +186,7 @@ comp_plot(df_nhsn, df_st, "Massachusetts")
 
 df_st <- read.csv("source/Minnesota/h7day.csv") |>
   aggreg_weekly_val("date", "%m/%d/%Y", value_col = "case_count") |>
-  st_output(source_name = "MN DoH", location = "Minnesota")
+  st_output(source_name = "MN DoH", location_name = "Minnesota")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Minnesota")
@@ -201,7 +199,7 @@ df_st <-
                 date = as.Date(ATTR.Week.Ending..COVID.Historical...alias,
                                      "%m/%d/%Y")) |>
   dplyr::filter(!is.na(date)) |>
-  st_output(source_name = "MT DPHHS", location = "Montana")
+  st_output(source_name = "MT DPHHS", location_name = "Montana")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Montana")
@@ -216,7 +214,7 @@ df_st <-
   dplyr::filter(!is.na(value)) |>
   dplyr::mutate(date = as.Date(`WEEK_END..Custom.SQL.Query.`,
                                      "%m/%d/%Y")) |>
-  st_output(source_name = "NE DHHS", location = "Nebraska")
+  st_output(source_name = "NE DHHS", location_name = "Nebraska")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Nebraska")
@@ -227,7 +225,7 @@ df_st <- read.csv(paste0("source/New Jersey/Cases_by_Onset_",
                          "(2)_1_1_2020_2025-03-25_052308.csv")) |>
   dplyr::mutate(date = Week.Ending.Date.value,
                 value = SUM.count..4...value) |>
-  st_output(source_name = "NJ DoH", location = "New Jersey")
+  st_output(source_name = "NJ DoH", location_name = "New Jersey")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "New Jersey")
@@ -241,7 +239,7 @@ df_st <- read.csv(paste0("source/New York/New_York_State_",
                                  Patients.Positive.After.Admission),
                    .by = As.of.Date) |>
   aggreg_weekly_val("As.of.Date", "%m/%d/%Y") |>
-  st_output(source_name = "NY DoH", location = "New York")
+  st_output(source_name = "NY DoH", location_name = "New York")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "New York")
@@ -262,7 +260,7 @@ df_st <-
   dplyr::mutate(sel = ifelse(as_of == max(as_of), 1, 0), .by = date) |>
   dplyr::filter(sel == 1) |>
   dplyr::select(-sel) |>
-  st_output(source_name = "NC DHHS", location = "North Carolina")
+  st_output(source_name = "NC DHHS", location_name = "North Carolina")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "North Carolina")
@@ -274,7 +272,7 @@ df_st <- read.csv(paste0("source/Ohio/COVIDDeathData_CountyOfResidence_",
                          "2025-04-02_042302.csv")) |>
   dplyr::summarise(value = sum(Hospitalized.Count), .by = Week.End) |>
   dplyr::mutate(date = as.Date(Week.End)) |>
-  st_output(source_name = "Ohio DoH", location = "Ohio") |>
+  st_output(source_name = "Ohio DoH", location_name = "Ohio") |>
   dplyr::filter(!is.na(date))
 
 comp_plot(df_nhsn, df_st, "Ohio")
@@ -285,7 +283,7 @@ df_st_tot <- rbind(df_st_tot, df_st)
 
 df_st <-
   extract_data("source/Oklahoma/hosp_by_hhs_region_2025-04-07_074503.json") |>
-  st_output(source_name = "OK DoH", location = "Oklahoma")
+  st_output(source_name = "OK DoH", location_name = "Oklahoma")
 
 comp_plot(df_nhsn, df_st, "Oklahoma")
 df_st_tot <- rbind(df_st_tot, df_st)
@@ -298,10 +296,11 @@ df_st <-
   tidyr::pivot_longer(-Day.of.Date, names_to = "region") |>
   dplyr::mutate(date = as.Date(Day.of.Date, "%B %d, %Y")) |>
   dplyr::summarise(value = sum(value), .by = date) |>
-  st_output(source_name = "OR Health Authority", location = "Oregon")
+  aggreg_weekly_val("date", "%Y-%m-%d") |>
+  st_output(source_name = "OR Health Authority", location_name = "Oregon")
 
-df_st_tot_daily <- rbind(df_st_tot_daily, df_st)
-comp_plot(df_nhsn, df_st, "Oregon")
+df_st_tot_other <- rbind(df_st_tot_other, df_st)
+simple_plot(df_st, "Oregon")
 
 ### Rhode Island -----
 
@@ -310,7 +309,7 @@ df_st <-
            skip = 2) |>
   dplyr::mutate(date = as.Date(gsub("../../.. - ", "", Week), "%m/%d/%y"),
                 value = `Number.of.hospital.admissions`) |>
-  st_output(source_name = "RI DoH", location = "Rhode Island")
+  st_output(source_name = "RI DoH", location_name = "Rhode Island")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Rhode Island")
@@ -321,7 +320,7 @@ df_st <- readxl::read_excel("source/Tennessee/daily_2025-01-17_042302.xlsx") |>
   dplyr::rename(date = DATE, value = NEW_HOSP) |>
   dplyr::mutate(date = as.character(date)) |>
   aggreg_weekly_val("date", "%Y-%m-%d") |>
-  st_output(source_name = "TN DoH", location = "Tennessee")
+  st_output(source_name = "TN DoH", location_name = "Tennessee")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Tennessee")
@@ -341,7 +340,7 @@ df_st <- data.frame(date = grep("Date", df_st, value = TRUE),
   dplyr::mutate(date = as.Date(gsub("Date: ", "", date)),
                 value = as.numeric(stringr::str_extract(value, "\\d+"))) |>
   aggreg_weekly_val("date", "%Y-%m-%d") |>
-  st_output(source_name = "UT DoH", location = "Utah")
+  st_output(source_name = "UT DoH", location_name = "Utah")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Utah")
@@ -357,7 +356,7 @@ df_st <- read.csv(paste0("source/Virginia/vdh-covid-19-publicusedataset-",
   dplyr::filter(!is.na(hosp), hosp > 0) |>
   dplyr::summarise(value = sum(hosp), .by = date) |>
   aggreg_weekly_val("date", "%Y-%m-%d") |>
-  st_output(source_name = "VI DoH", location = "Virginia")
+  st_output(source_name = "VI DoH", location_name = "Virginia")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Virginia")
@@ -369,7 +368,7 @@ df_st <- read.csv(paste0("source/Washington/wahealth_hospitaluse_",
   dplyr::select(value = COVID19.7.day.Avg.Hospitalized,
                 date = Date.Range.End) |>
   dplyr::mutate(date = as.Date(date)) |>
-  st_output(source_name = "WA DoH", location = "Washington")
+  st_output(source_name = "WA DoH", location_name = "Washington")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Washington")
@@ -381,7 +380,7 @@ df_st <-
            sep = "\t") |>
   dplyr::mutate(date = as.Date(Day.of.End.of.Week.Date, "%m/%d/%Y"),
                 value = (X / 100000) * 5910955) |>
-  st_output(source_name = "WV DoH", location = "West Virginia")
+  st_output(source_name = "WV DoH", location_name = "West Virginia")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "West Virginia")
@@ -393,7 +392,7 @@ df_st <-
                   "_data.csv"), sep = "\t")  |>
   dplyr::mutate(value = as.numeric(`Inp.Cov.Con.Avg`) / 7) |>
   aggreg_weekly_val("Report.Date", "%m/%d/%Y") |>
-  st_output(source_name = "WI DoH", location = "Wisconsin")
+  st_output(source_name = "WI DoH", location_name = "Wisconsin")
 
 df_st_tot <- rbind(df_st_tot, df_st)
 comp_plot(df_nhsn, df_st, "Wisconsin")
@@ -404,7 +403,7 @@ df_st <-
   read.csv("source/Puerto Rico/covid19_hospitalizations_grouped_by_date.csv") |>
   dplyr::rename(value = TotalHospitalizations) |>
   aggreg_weekly_val("HospitalizationDate", "%m/%d/%Y") |>
-  st_output(source_name = "PR DoH", location = "Puerto Rico")
+  st_output(source_name = "PR DoH", location_name = "Puerto Rico")
 
 df_st_tot_other <- rbind(df_st_tot_other, df_st)
 simple_plot(df_st, "Puerto Rico")
@@ -415,14 +414,6 @@ write.csv(df_st_tot, "output/hospitalization_states.csv", row.names = FALSE)
 comp_plot(df_nhsn, df_st_tot, "All Location", TRUE, font_size = 20)
 comp_plot(df_nhsn, df_st_tot, "All Location 2023", TRUE, year_limit = 2023,
           font_size = 20)
-
-#### Daily
-write.csv(df_st_tot_daily, "output/daily_hospitalization_states.csv",
-          row.names = FALSE)
-comp_plot(df_nhsn, df_st_tot_daily, "Daily - All Location", TRUE,
-          font_size = 20)
-comp_plot(df_nhsn, df_st_tot_daily, "Daily - All Location 2023", TRUE,
-          year_limit = 2023, font_size = 20)
 
 #### Other
 write.csv(df_st_tot_other, "output/other_hospitalization_states.csv",

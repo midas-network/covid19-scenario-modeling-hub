@@ -57,24 +57,6 @@ the output folder:
 
 <img src="./viz/All Location.png" width="1000" height="1000"/>
 
-### Daily Hospitalization data - States
-
-For two states the data are available at daily level:
-
-| State | Links | Notes | Source |
-|:---|:---------|:---|:---------|
-| Maryland       | [MD COVID-19 - MASTER Case Tracker](https://opendata.maryland.gov/Health-and-Human-Services/MD-COVID-19-MASTER-Case-Tracker/mgd3-qk8t/about_data) | **DAILY** Hospitalization: Total Number of Hospital Beds| Maryland Department of Health Prevention and Health Promotion Administration, MDH PHPA |
-| Oregon         | [Oregon COVID-19 Hospital Capacity Summary Tables](https://public.tableau.com/app/profile/oregon.health.authority.covid.19/viz/OregonCOVID-19HospitalCapacitySummaryTables_15965754787060/BedAvailabilitybyRegionSummaryTable) | **DAILY** Positive Patients - Hospitalization by Region | Oregon Health Authority |
-
-The output file containing the processed hospitalization data is available in 
-the output folder:
-[output/daily_hospitalization_states.csv](./output/daily_hospitalization_states.csv)
-
-The **daily** data from those states have also been compared to **weekly** 
-admission from NSHN:
-
-<img src="./viz/Daily - All Location.png" width="1000" height="750"/>
-
 ### Different hospitalization representation
 
 For some states, hospitalization data was available in a different format than
@@ -87,6 +69,8 @@ The table below contains information for the states with this issue:
 |:---|:---------|:---|:---------|
 | California     | [COVID-19 Hospital Data](https://data.chhs.ca.gov/dataset/covid-19-hospital-data) | Hospitalized patient (County level; include all patients) | California Department of Public Health|
 | Illinois       | [Seasonal Respiratory Illness Dashboard](https://dph.illinois.gov/topics-services/diseases-and-conditions/respiratory-disease/surveillance/respiratory-disease-report.html) | Percentages of Hospital Admissions | Illinois Department of Public Health |
+| Maryland       | [MD COVID-19 - MASTER Case Tracker](https://opendata.maryland.gov/Health-and-Human-Services/MD-COVID-19-MASTER-Case-Tracker/mgd3-qk8t/about_data) | Aggregate daily Hospitalization: Total Number of Hospital Beds| Maryland Department of Health Prevention and Health Promotion Administration, MDH PHPA |
+| Oregon         | [Oregon COVID-19 Hospital Capacity Summary Tables](https://public.tableau.com/app/profile/oregon.health.authority.covid.19/viz/OregonCOVID-19HospitalCapacitySummaryTables_15965754787060/BedAvailabilitybyRegionSummaryTable) | Aggregated daily Positive Patients - Hospitalization by Region | Oregon Health Authority |
 | Puerto Rico    | [COVID-19 Hospitalizaciones ](https://datos.salud.pr.gov/covid-19/hospitalizations) | Number of Hospitalizations associated with COVID-19 | Puerto Rico Department of Health |
 
 The output file containing the processed hospitalization data is available in 
