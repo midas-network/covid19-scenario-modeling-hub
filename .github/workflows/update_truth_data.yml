@@ -41,7 +41,7 @@ jobs:
 
     - name: Generate truth csv files
       run: |
-        R -e 'source("src/target-data")'
+        R -e 'source("src/target-data.R")'
 
     - name: Commit
       run: |
