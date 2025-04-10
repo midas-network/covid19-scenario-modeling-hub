@@ -42,9 +42,9 @@ To complete this gap, we collected information from local state authorities.  Wh
 available these data are aggregate them in the same format as the target data, except from
 Arkansas who reported monthly information.
 
-The results will be posted soon in an hospitalization subfolder containing the 
-source data, the code to reproduce the results and visualization comparison
-with the NHSN data. 
+The results are available in the [hospitalization subfolder](./hospitalization) containing 
+documentation, output file, source data, code to reproduce the results and 
+visualization comparison with the NHSN data. 
 
 
 ## Wastewater
