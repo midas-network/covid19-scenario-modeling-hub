@@ -416,7 +416,7 @@ metadata and abstract.***
     the week
 -   Submission file type: **gz.parquet** (from Apache Arrow) is now required. The
     submission file can be partitioned by "origin_date" and "target". For more information,
-    please consult the associated [README](./data-processed/README.md) 
+    please consult the associated [README](./model-output/README.md) 
 
 -   **Abstract:** We require a brief abstract describing model
     assumptions and results, from all teams.
