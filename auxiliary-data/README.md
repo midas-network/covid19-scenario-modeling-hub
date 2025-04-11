@@ -11,6 +11,7 @@ The data are organized in multiple sections:
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
 - [Locations and Census Data](./README.md#location-and-census-data)
+- [Rounds](./README.md#rounds)
 - [Additional Resources](./README.md#additional-resources)
     - [MIDAS Network Curated Archive](./README.md#midas-network-curated-archive)
     
@@ -29,7 +30,7 @@ vaccination coverage data.
 The folder contains a [README](./vaccination-coverage/README.md) file with detailed 
 information for each file.
 
-## Report
+## Reports
 
 The [reports](./reports/) folder contains reports from previous 
 Scenario Modeling Hub rounds, starting round 19. At the time they were 
