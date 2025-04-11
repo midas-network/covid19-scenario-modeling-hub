@@ -439,7 +439,7 @@ in a hubverse compliant
 [time-series format](https://hubverse.io/en/latest/user-guide/target-data.html).
 
 The data are automatically updated on Monday morning. The code to generate the
-data is available in the [src](./scr/) folder.
+data is available in the [src](./src/) folder.
 
 ### Death
  
