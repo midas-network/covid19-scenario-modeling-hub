@@ -6,6 +6,7 @@ COVID-19 modeling efforts.
 The data are organized in multiple sections:
 
 - [Vaccination Coverage](./README.md#vaccination-coverage)
+- [Report](./READMEmd#report)
 - [Hospitalization](./README.md#hospitalization)
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
@@ -27,6 +28,22 @@ vaccination coverage data.
 
 The folder contains a [README](./vaccination-coverage/README.md) file with detailed 
 information for each file.
+
+## Report
+
+The [report](./report/) folder contains reports from previous 
+Scenario Modeling Hub rounds, starting round 19. At the time they were 
+produced, some of these reports were intended to be shared only with certain 
+stakeholders and have disclaimers to that effect. All reports have since 
+become publicly available.
+
+Each report contains an executive summary with key messages and results, and
+analyses of ensemble and individual projections. Results at national and 
+state level are available for all targets. 
+
+For round 1 to round 18, the report are available in the COVID-19 Scenario 
+Modeling Hub Archive Repository, folder 
+[code/reports](https://github.com/midas-network/covid19-scenario-modeling-hub_archive/tree/master/code/reports).
 
 ## Hospitalization
 
@@ -185,6 +202,17 @@ The folder [data-locations/](./data-locations/) contains two `csv` files:
 
 A python and R script are available in the [data-locations/](./data-locations/)
 folder to generate the data. 
+
+## Rounds
+
+The [rounds](./rounds/) folder contains the round information starting round 
+19 in a markdown format with a folder names `roundX_viz` with X being the round
+number, containing associated visualization (for example, scenario table in a 
+PNG format).
+
+For previous round, please consult the
+[COVID-19 Scenario Modeling Hub - Archive](https://github.com/midas-network/covid19-scenario-modeling-hub_archive) 
+GitHub Repository. 
 
 ## Addtional Resources
 
