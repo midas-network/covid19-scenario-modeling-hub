@@ -436,7 +436,10 @@ for technical submission requirements.
 
 The [target-data/](./target-data) folder contains the target data
 in a hubverse compliant 
-[time-series format](https://hubverse.io/en/latest/user-guide/target-data.html)
+[time-series format](https://hubverse.io/en/latest/user-guide/target-data.html).
+
+The data are automatically updated on Monday morning. The code to generate the
+data is available in the [src](./scr/) folder.
 
 ### Death
  
@@ -456,6 +459,35 @@ since pandemic start).
 Weekly Hospital Respiratory Data (HRD) Metrics by Jurisdiction from
 the [National Healthcare Safety Network (NHSN)](https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/ua7e-t2fy/about_data) will be used for incidence hospitalization
 target. The data are weekly. 
+
+## Auxiliary Data
+
+The repository stores and updates additional data relevant to the COVID-19 
+modeling efforts in the [auxiliary-data/](./auxiliary-data/) folder:
+
+- Vaccination Coverage: data on vaccination coverage that can be used for 
+  a specific round. 
+  
+- Reports: Reports from COVID-19 Scenario Modeling Hub rounds results. Each 
+  report contains an executive summary with key messages and results, and 
+  analyses of ensemble and individual projections. 
+  
+- Hospitalization: Data from local state authorities to complete NHSN data. Does
+  not include all states. 
+
+- Wastewater & Other Topic of Interest: List of source and link that might be
+  of interest for COVID-19 modeling. The list contains link to cases, deaths,
+  tests, vaccination, emergency department visit, variants, wastewater, 
+  demographics data.
+
+- Population and census data: National and State level name and fips code as 
+  used in the Hub and associated population size.
+
+- Rounds: Information on ongoing round and previous round available in the 
+  repository
+
+For more information, please consult the associated 
+[README file](./auxiliary-data/README.md).
 
 
 ## Ensemble model
