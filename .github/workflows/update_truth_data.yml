@@ -2,7 +2,7 @@ name: Update Truth Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 3'
+    - cron: '0 9 * * 1'
 
 jobs:
   update_target-data:
