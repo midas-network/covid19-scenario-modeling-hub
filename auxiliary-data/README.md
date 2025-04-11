@@ -6,7 +6,7 @@ COVID-19 modeling efforts.
 The data are organized in multiple sections:
 
 - [Vaccination Coverage](./README.md#vaccination-coverage)
-- [Report](./READMEmd#report)
+- [Reports](./README.md#reports)
 - [Hospitalization](./README.md#hospitalization)
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
@@ -31,7 +31,7 @@ information for each file.
 
 ## Report
 
-The [report](./report/) folder contains reports from previous 
+The [reports](./reports/) folder contains reports from previous 
 Scenario Modeling Hub rounds, starting round 19. At the time they were 
 produced, some of these reports were intended to be shared only with certain 
 stakeholders and have disclaimers to that effect. All reports have since 
