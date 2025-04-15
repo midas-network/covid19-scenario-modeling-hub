@@ -11,6 +11,7 @@ The data are organized in multiple sections:
 - [Wastewater](./README.md#wastewater)
 - [Other Topics of Interest](./README.md#other-topics-of-interest)
 - [Locations and Census Data](./README.md#location-and-census-data)
+- [Target Data Archive](./README.md#target-data-archive)
 - [Rounds](./README.md#rounds)
 - [Additional Resources](./README.md#additional-resources)
     - [MIDAS Network Curated Archive](./README.md#midas-network-curated-archive)
@@ -203,6 +204,13 @@ The folder [data-locations/](./data-locations/) contains two `csv` files:
 
 A python and R script are available in the [data-locations/](./data-locations/)
 folder to generate the data. 
+
+## Target Data Archive
+
+The [target-data_archive](./target-data_archive) folder contains archive of the
+target-data `time-series` data. 
+The data are automatically updated on Monday, and the past version will be 
+automatically moved to this folder, with the date append to the file name.
 
 ## Rounds
 

@@ -440,6 +440,9 @@ in a hubverse compliant
 
 The data are automatically updated on Monday morning. The code to generate the
 data is available in the [src](./src/) folder.
+The past version of the `time-series` files are stored in the 
+[auxiliary-data/target-data_archive](./auxiliary-data/target-data_archive/) 
+folder, with the date the data was archived append to the filename.
 
 ### Death
  
