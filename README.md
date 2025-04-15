@@ -519,7 +519,15 @@ Additional resources might be available from the
 [MIDAS Coordination Center](https://midasnetwork.us/), 
 please contact [questions\@midasnetwork.us](mailto:questions@midasnetwork.us) 
 for information.
- 
+
+## Funding
+
+Scenario modeling groups are supported through grants to the contributing 
+investigators.
+
+The Scenario Modeling Hub site is supported by the MIDAS Coordination Center, 
+NIGMS Grant U24GM132013 (2019-2024) and R24GM153920 (2024-2029) to the
+University of Pittsburgh.
 
 ## The COVID-19 Scenario Modeling Hub Coordination Team
 
