@@ -378,7 +378,7 @@ metadata and abstract.***
 | Scenario B. 65+ and high-risk booster, classic immunization timing | HighRiskVax_classicTiming | B-2025-04-01  |
 | Scenario C. 65+ and high-risk booster, early immunization          | HighRiskVax_earlyTiming   | C-2025-04-01  |
 | Scenario D. All booster, classic immunization timing               | allVax_classicTiming      | D-2025-04-01  |
-| Scenario E. Sll booster, early immunization                        | allVax_earlyTiming        | E-2025-04-01  |
+| Scenario E. All booster, early immunization                        | allVax_earlyTiming        | E-2025-04-01  |
 
 -   **Due date**: Tue May 6, 2025
 
