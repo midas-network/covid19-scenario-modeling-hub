@@ -405,10 +405,10 @@ metadata and abstract.***
 -   Projection quantiles for incident outcomes are optional but encouraged. 
     Similarly projections of cumulative outcomes (either as quantiles or cumulative
     trajectories) are optional.
-        -   Weekly incident deaths
-        -   Weekly incident hospitalizations
-        -   Weekly cumulative deaths since simulation start 
-        -   Weekly cumulative hospitalizations since simulation start
+    -   Weekly incident deaths
+    -   Weekly incident hospitalizations
+    -   Weekly cumulative deaths since simulation start 
+    -   Weekly cumulative hospitalizations since simulation start
     -   For teams who wish to submit quantiles, the format is in accordance with 
     prior rounds. We ask for the following quantiles: 0.01, 0.025, 0.05, every 5% 
     to 0.95, 0.975, and 0.99. Mean is optional.
