@@ -6,13 +6,12 @@ model_contributors: [
    "name": "Shraddha Ramdas Bandekar",
     "affiliation": "The University of Texas at Austin",
     "email": "shraddha.bandekar@austin.utexas.edu"
-  }
+  },
   {
     "name": "Kaiming Bi",
     "affiliation": "University of Texas Health Science Center School of Public Health",
     "email": "Kaiming.Bi@uth.tmc.edu"
   },
-,
   {
     "name": "Anass Bouchnita",
     "affiliation": "The University of Texas at El Paso",
