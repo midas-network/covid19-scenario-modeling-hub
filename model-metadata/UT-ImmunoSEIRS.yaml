@@ -1,6 +1,7 @@
-team_name: UTA
-model_name: ImmunoSEIRS
-model_abbr: UTA-ImmunoSEIRS
+team_name: "University of Texas at Austin"
+team_abbr: "UT"
+model_name: "UT-ImmunoSEIRS"
+model_abbr: "ImmunoSEIRS"
 model_contributors: [
   {
    "name": "Shraddha Ramdas Bandekar",
