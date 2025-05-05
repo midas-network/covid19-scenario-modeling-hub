@@ -82,10 +82,10 @@ Other tools are also accessible, for example [parquet-tools](https://github.com/
 For example, in R:
 ```r
 # To write "parquet" file format:
-filename <- ”path/YYYY-MM-DD-team_model.parquet”
+filename <- ”path/model-output/team-model/YYYY-MM-DD-team_model.parquet”
 arrow::write_parquet(df, filename)
 # with "gz compression"
-filename <- ”path/YYYY-MM-DD-team_model.gz.parquet”
+filename <- ”path/model-output/team-model/YYYY-MM-DD-team_model.gz.parquet”
 arrow::write_parquet(df, filename, compression = "gzip", compression_level = 9)
 
 # To read "parquet" file format:
@@ -118,12 +118,12 @@ aggregation of the team and model abbreviation name.
 
 For example, in R:
 ```R
-team_folder <- ”path/data-processed/<team_model>/”
+team_folder <- ”path/model-output/<team_model>/”
 
 # Without compression
 arrow::write_dataset(df, team_folder, partitioning = c("origin_date", "target"),
                      hive_style = FALSE,
-                     basename_template = "YYYY-MM-DD-tteam_model{i}.parquet")
+                     basename_template = "YYYY-MM-DD-team_model{i}.parquet")
 
 # With GZIP Compression
 arrow::write_dataset(df, team_folder, partitioning = c("origin_date", "target"),
@@ -136,7 +136,7 @@ For example, in Python:
 ```Py
 import pyarrow.dataset as ds
 
-team_folder <- ”path/data-processed/<team_model>/”
+team_folder <- ”path/model-output/<team_model>/”
 
 
 # Without compression
