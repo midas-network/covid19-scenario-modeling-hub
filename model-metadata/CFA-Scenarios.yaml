@@ -1,0 +1,43 @@
+team_name: "CFA"
+team_abbr: "CFA"
+model_name: "Scenarios"
+model_abbr: "Scenarios"
+model_contributors:
+  [
+    {
+      "name": "Laura Albrecht",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "zhw3@cdc.gov",
+    },
+    {
+      "name": "Elisha Are",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "aj00@cdc.gov",
+    },
+    {
+      "name": "Michael Batista",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "upi8@cdc.gov",
+    },
+    {
+      "name": "Ariel Shurygin",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "uva5@cdc.gov",
+    },
+    {
+      "name": "Kok Ben Toh",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "tjk3@cdc.gov",
+    },
+    {
+      "name": "Thomas Hladish",
+      "affiliation": "CDC Center for Forecasting and Outbreak Analytics",
+      "email": "utx5@cdc.gov",
+    },
+  ]
+license: "Apache-2.0 or later"
+methods: "SEIS multi-strain ODE model with age structure, immune waning, and vaccine and infection history.  State-based models are fit to hospitalization and strain prevalence data.  US model is an aggregate."
+methods_long: "We created state-specific COVID-19 burden projections using a deterministic, modified SEIS model with additional stratifications and partial immunity.  Each infection state is stratified by age, immune history, vaccination history, waning status (for Susceptibles), and infecting strain (all other compartments).  Immunity is determined by immunogenic events (infections and vaccinations) and time since the most recent event.  Protection against infection is strain-specific: past infection with a more similar variant, or vaccination with a better-matched vaccine, provides a higher level of protection against the challenging strain.  External introductions of new variants are represented by introducing a small, transient new-variant infection hazard for 18- to 49-year-olds, over a one-month period.  Stochastic Variational Inference (SVI) is used to fit 28 parameters for each U.S. state to 39 months of COVID-19 hospitalization and strain prevalence data. For some time periods, hospitalizations are inferred from emergency department visit data.  The U.S. national projections are aggregates of the state projections.  Hospitalizations are estimated after simulation by applying locale-, immune state-, and age-specific infection-hospitalization ratios that are estimated during the fitting process. Deaths are estimated from hospitalizations by applying age-specific hospitalization-death ratios and sampling from a hospitalization-to-death delay distribution."
+model_version: "2025-05-06"
+website_url: "https://github.com/cdcgov/DynODE"
+data_inputs: "Weekly hospitalization data based on National Healthcare Safety Network (NHSN) from Feb 2022 to Apr 2024, inferred weekly hospital admissions using National Syndromic Surveillance Program (NSSP) emergency department visit data from May 2024 to Apr 2025, and biweekly variant proportion data published by CDC"
