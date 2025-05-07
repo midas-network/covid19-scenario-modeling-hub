@@ -1,32 +1,40 @@
 team_name: "UVA Biocomplexity Institute"
 team_abbr: "UVA"
 model_name: adaptive
-model_abbr: UVA-adaptive
+model_abbr: adaptive
 model_version: "v23"
 model_contributors:
-  - name: "Przemyslaw Porebski"
-    affiliation: "UVA"
-    email: "pjp2b@virginia.edu"
-  - name: "Srinivasan Venkatramanan"
-    affiliation: "UVA"
-    email: "srini@virginia.edu"
-  - name: "Bryan Lewis"
-    affiliation: "UVA"
-    email: "brylew@virginia.edu"
-  - name: "Aniruddha Adiga"
-    affiliation: "UVA"
-    email: "aa5dw@virginia.edu"
-  - name: "Jiangzhuo Chen"
-    affiliation: "UVA"
-  - name: "Madhav Marathe"
-    affiliation: "UVA"
+  [
+    {
+      "name": "Przemyslaw Porebski",
+      "affiliation": "UVA",
+      "email": "pjp2b@virginia.edu",
+    },
+    {
+      "name": "Srinivasan Venkatramanan",
+      "affiliation": "UVA",
+      "email": "srini@virginia.edu",
+    },
+    {
+      "name": "Bryan Lewis",
+      "affiliation": "UVA",
+      "email": "brylew@virginia.edu",
+    },
+    {
+      "name": "Aniruddha Adiga",
+      "affiliation": "UVA",
+      "email": "aa5dw@virginia.edu",
+    },
+    { "name": "Jiangzhuo Chen", "affiliation": "UVA" },
+    { "name": "Madhav Marathe", "affiliation": "UVA" },
+  ]
 website_url: https://biocomplexity.virginia.edu/project/covid-19-pandemic-response
 license: cc-by-4.0
 methods: Compartmental model of transmission and disease dynamics using PatchSim
-methods_long: | 
-      We use a discrete time SEIR compartmental model with explicit strain modeling fit to observed hospitalizations at the state level. The fitting procedure takes into account variable hospitalization rate, depending on the immune status derived from round 16 results.
-      Deaths are projected using rescaling of the projected hospitalizations by the current (last 3 weeks) death-to-hospitalization ratio per state. 
-      Uncertainty bounds are obtained by using an experiment design over other model parameters such as infectious/incubation periods, reporting delay and bounds on hospitalization rates. Representative trajectories are selected using K-medoids clustering.
-      Seasonal effects are modeled by proxy using the fitted effective transmissibility. The observed, smoothed and twp seasons averaged effective transmissibility  is assumed in the future.
+methods_long: |
+  We use a discrete time SEIR compartmental model with explicit strain modeling fit to observed hospitalizations at the state level. The fitting procedure takes into account variable hospitalization rate, depending on the immune status derived from round 16 results.
+  Deaths are projected using rescaling of the projected hospitalizations by the current (last 3 weeks) death-to-hospitalization ratio per state. 
+  Uncertainty bounds are obtained by using an experiment design over other model parameters such as infectious/incubation periods, reporting delay and bounds on hospitalization rates. Representative trajectories are selected using K-medoids clustering.
+  Seasonal effects are modeled by proxy using the fitted effective transmissibility. The observed, smoothed and twp seasons averaged effective transmissibility  is assumed in the future.
 data_inputs: "Data provided by SMH"
 citation: https://doi.org/10.1016/j.epidem.2024.100761
