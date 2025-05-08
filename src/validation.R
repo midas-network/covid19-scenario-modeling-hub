@@ -3,7 +3,7 @@ read_config_val <- function(hub_path, config = "validation") {
   if (file.exists(path)) {
     file <- jsonlite::read_json(path, simplifyVector = TRUE)
   } else {
-    message("Validation config file not found") 
+    message("Validation config file not found")
   }
 }
 
@@ -51,7 +51,7 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
   if (!(round_id %in% names(val_param))) {
     msg <- paste0("The round id in the submission file was not recognized, ",
                   "please verify")
-    if (post_msg) post_message(list("msg" = msg), repo_name, gh_pr_number, 
+    if (post_msg) post_message(list("msg" = msg), repo_name, gh_pr_number,
                                gh_token)
     stop(msg)
   }
@@ -65,10 +65,10 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
                                  gh_token)
       stop(msg)
     }
-    test_mod_files <- 
+    test_mod_files <-
       SMHvalidation::validate_part_file(".", x, val_param$partition) |>
       process_test(file_path = x)
-    test_mod_content <- do.call(validate_subm, 
+    test_mod_content <- do.call(validate_subm,
                                 c(val_param, x = x, hub_path = hub_path,
                                   round_id = round_id))
   } else {
@@ -76,7 +76,7 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
     # simple validation
     test_mod_files <- hubValidations::validate_model_file(".", x) |>
       process_test(file_path = x)
-    test_mod_content <- do.call(validate_subm, c(val_param, x = x, 
+    test_mod_content <- do.call(validate_subm, c(val_param, x = x,
                                                  hub_path = hub_path))
   }
   # output
@@ -100,15 +100,19 @@ pr_validate <- function(repo_name, gh_pr_number, gh_commit_sha, hub_path,
                         gh_token, post_msg = TRUE) {
   # Files
   if (nchar(gh_commit_sha) > 1) {
-    pr_files <- gh::gh(paste0("GET /repos/", repo_name, "/commits/", 
+    pr_files <- gh::gh(paste0("GET /repos/", repo_name, "/commits/",
                               gh_commit_sha), .token = gh_token)
+    if ("Merge branch 'midas-network:main'", grepl(pr_files$commit$message)) {
+      pr_files <- pr_filenames <- NULL
+    }
     commit <- TRUE
   } else {
     pr_files <- gh::gh(paste0("GET /repos/", repo_name, "/pulls/", gh_pr_number,
                               "/files"), .token = gh_token)
     commit <- FALSE
   }
-  pr_filenames <- select_files(pr_files, commit = commit)
+  if (!is.null(pr_files))
+    pr_filenames <- select_files(pr_files, commit = commit)
   # Metadata
   if (any(grepl("model-metadata/", unique(pr_filenames)))) {
     meta_files <- extract_files(pr_files, "model-metadata/", commit = commit)
