@@ -1,0 +1,17 @@
+team_name: "University of Illinois, Urbana-Champaign"
+team_abbr: "UIUC"
+model_name: "UIUC-IMMCYC"
+model_abbr: "IMMCYC"
+model_contributors: [
+  {
+    "name": "Sophie L Larsen",
+    "affiliation": "University of Illinois at Urbana-Champaign",
+    "email": "sll4@illinois.edu"
+  }
+]
+license: "MIT"
+methods: "Deterministic SEIS model with three levels of immunity (boosted, partial, waned/naive) and 4 age/risk compartments (child, adult, adult-high-risk, senior)."
+model_version: "1.0"
+website_url: "https://github.com/SL-Larsen/IMMCYC"
+team_funding: "SLL was funded by SHIELD Illinois and the Isabel Norton Award from the School of Integrative Biology, UIUC during the completion of this work."
+data_inputs: "SMH-provided data were used. Additionally, contact matrices from the 4th wave of the Berkeley Interpersonal Contact Survey (Feehan & Mahmud, Nat. Comm., 2021) informed relative contact rates between groups."
