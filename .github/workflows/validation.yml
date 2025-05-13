@@ -67,8 +67,7 @@ jobs:
             R -e 'source("src/validation.R")
                   pr_validate(Sys.getenv("GITHUB_REPOSITORY"),
                               Sys.getenv("GH_PR_NUMBER"), 
-                              "", ".",
-                              #Sys.getenv("GH_COMMIT_SHA"), ".",
+                              Sys.getenv("GH_COMMIT_SHA"), ".",
                               Sys.getenv("GH_TOKEN"))'
           env:
             GH_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
