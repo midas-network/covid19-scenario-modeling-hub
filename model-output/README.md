@@ -472,7 +472,7 @@ The validation automatically runs and output a message.
         - "Error" (red cross): the validation has failled and returned a message 
         indicating the error(s). The error(s) should be fixed to have the PR 
         accepted
-        - "Warning" (red !): the PR can be accepted. However, it is 
+        - "Warning" (red !): the PR will fail but it can be accepted. It is 
         necessary for the submitting team to validate if the warning(s) is 
         expected or not before merging the PR.
         - "Success" (green check): the validation did not found any issue and 
