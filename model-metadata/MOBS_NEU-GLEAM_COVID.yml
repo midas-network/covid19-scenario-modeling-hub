@@ -22,11 +22,9 @@ model_contributors: [
 ]
 website_url: "https://www.mobs-lab.org/"
 license: "CC-BY_SA-4.0"
-designated_model: true
 citation: "https://uploads-ssl.webflow.com/58e6558acc00ee8e4536c1f5/5e8bab44f5baae4c1c2a75d2_GLEAM_web.pdf"
 team_funding: ""
 methods: "Metapopulation, age structured SLIR model."
 data_inputs: "Weekly incident covid-19 hospitalizations, queried through HHS"
 methods_long: "The GLEAM framework is based on a metapopulation approach in which the US is divided into geographical subpopulations. Human mobility between subpopulations is represented on a network.  This mobility data layer identifies the numbers of individuals traveling from one sub-population to  another. The mobility network is made up of different kinds of mobility processes from short-range commuting between nearby subpopulations to flights. To model short-range mobility  such as commuting or car travel, we rely on databases collected from the Offices of Statistics of 30  countries on five continents. Superimposed on the US population and mobility layers is an compartmental epidemic model that defines the infection and population dynamics. "
-ensemble_of_models: false
-ensemble_of_hub_models: false
+
