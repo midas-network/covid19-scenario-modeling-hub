@@ -1,0 +1,29 @@
+team_name: "UNC Charlotte"
+team_abbr: "UNCC"
+model_name: "Hierbin Hybrid"
+model_abbr: "Hierbin"
+model_contributors: [
+  {
+    "name": "Shi Chen",
+    "affiliation": "UNC Charlotte",
+    "email": "schen56@charlotte.edu"
+  },
+  {
+   "name": "Daniel Janies",
+    "affiliation": "UNC Charlotte",
+    "email": "djanies@charlotte.edu"
+  },
+  {
+    "name": "Rajib Paul",
+    "affiliation": "UNC Charlotte",
+    "email": "rpaul9@charlotte.edu"
+  }
+]
+license: "CC BY-NC"
+methods: "We applied a data driven deep learning model to simulate scenario A as the baseline scenario for both hospitalization and death. Then a mechanistic model is applied to further simulate scenarios B through E."
+methods_long: "We first used two years historical data (2023-2025) to fit a long short term memory (LSTM) deep learning model. Then we simulated for another year (52 weeks horizon) and calibrated it to the latest data, as the baseline scenario A. Once curves in scenario A was achieved, we further simulated hospitalization and death reduction via vaccination, as well as waning immuity and other important mechanisms. In each scenario, 1,000 simulations were applied, with a randomly selected 100 sample was retrieved to generate the final dataset."
+model_version: "1.0"
+website_url: "NA"
+team_funding: "MIDASUP-05"
+data_inputs: "Prescribed by the SMH coordination team. No additional data inputs are used in the COVID-19 R19 work."
+citation: "Chen, S.*, Janies, D., Paul, R., and Thill, J-C. 2024. Leveraging advances in data-driven methods for epidemic modeling. Epidemics, 48, 100782."
