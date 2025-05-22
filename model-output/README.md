@@ -439,17 +439,53 @@ that row.
 
 ---
 
-## Scenario validation
+## Model outout validation
 
 To ensure proper data formatting, pull requests for new data or updates in
-data-processed/ will be automatically validated.
+`model-output/` and `model-metadata/` are automatically validated.
 
 ### Pull request scenario validation
 
-When a pull request is submitted, the data are automatically validated. 
-The intent for these tests are to validate the requirements above and 
-all checks are specifically enumerated 
-[on the wiki](https://github.com/midas-network/covid19-scenario-modeling-hub/wiki/Scenario-File-Checks).
-Please [let us know](https://github.com/midas-network/covid19-scenario-modeling-hub/issues) if
+When a pull request is submitted, the data are automatically validated.
+The intent for these tests are to validate the requirements above and
+all checks are specifically enumerated on the
+[SMH website](https://scenariomodelinghub.org/documentation/validation.html).
+
+Please 
+[let us know](https://github.com/midas-network/covid19-scenario-modeling-hub/issues) if
 the wiki is inaccurate.
 
+### Workflow
+
+When a pull request is submitted, the validation will be 
+automatically triggered.
+
+- If the pull request (PR) contains update abstract file(s):
+    - These files are manually validated, the automatic validation
+    will only returns a message indicating it did not run any
+    validation. 
+
+- If the PR contains model output and/or model metadata submission file(s). 
+The validation automatically runs and output a message.
+
+    - The validation has 3 possible output:
+        - "Error" (red cross): the validation has failled and returned a message 
+        indicating the error(s). The error(s) should be fixed to have the PR 
+        accepted
+        - "Warning" (red !): the PR will fail but it can be accepted. It is 
+        necessary for the submitting team to validate if the warning(s) is 
+        expected or not before merging the PR. If all warning are expected and
+        accepted, the PR will be merged without needed modification on those
+        warning. 
+        - "Success" (green check): the validation did not found any issue and 
+        returns a message indicating that the validation is a success
+
+If any issues or questions on a PR, please feel free to send them in the PR via
+comments.
+
+#### Run checks locally
+
+To run these checks locally rather than waiting for the results from a pull
+request, the package 
+[SMHvalidation](https://github.com/midas-network/SMHvalidation) contains 
+multiple documentation and vignettes. 
