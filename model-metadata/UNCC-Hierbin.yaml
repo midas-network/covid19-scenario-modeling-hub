@@ -19,7 +19,7 @@ model_contributors: [
     "email": "rpaul9@charlotte.edu"
   }
 ]
-license: "cc-by-4.0"
+license: "mit"
 methods: "We applied a data driven deep learning model to simulate scenario A as the baseline scenario for both hospitalization and death. Then a mechanistic model is applied to further simulate scenarios B through E."
 methods_long: "We first used two years historical data (2023-2025) to fit a long short term memory (LSTM) deep learning model. Then we simulated for another year (52 weeks horizon) and calibrated it to the latest data, as the baseline scenario A. Once curves in scenario A was achieved, we further simulated hospitalization and death reduction via vaccination, as well as waning immuity and other important mechanisms. In each scenario, 1,000 simulations were applied, with a randomly selected 100 sample was retrieved to generate the final dataset."
 model_version: "1.0"
