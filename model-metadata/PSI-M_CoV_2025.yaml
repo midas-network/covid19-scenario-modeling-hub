@@ -1,0 +1,59 @@
+team_name: "Predictive Science Inc"
+team_abbr: "PSI"
+model_name: "Mechanistic SARS-CoV-2 compartmental model designed for round 19"
+model_abbr: "M_CoV_2025"
+model_contributors: [
+  {
+    "name": "Turtle J",
+    "affiliation": "Predictive Science",
+    "email": "jturtle@predsci.com"
+  },
+  {
+    "name": "Ben-Nun M",
+    "affiliation": "Predictive Science",
+    "email": "mbennun@predsci.com"
+  },
+  {
+    "name": "Riley P",
+    "affiliation": "Predictive Science",
+    "email": "pete@predsci.com"
+  }
+]
+license: "mit"
+methods: "For each state our scenario projections are generated using an age/risk stratified SEIRS mechanistic model with vaccination. The model is calibrated to 2024-25 hospitalization and mortality data, and extrapolated through the 2024-25 season."
+methods_long: >
+    The model is an SEIRS compartmental model with four age groups: 0-17, 18-64 low-risk,
+    18-64 high-risk, and 65+.  The susceptible population is divided into four compartments:
+    Vaccinated, Vaccinated-waned, Infected-waned, and basic Susceptible.  The Recovered state
+    assumes 100% protection for a short time.  In addition to standard waning, all susceptible 
+    and recovered states bleed back 
+    to basic Susceptible through immune escape at a rate of 30% per year.
+    We use the population and vaccine time series provided by the Scenario Hub and
+    assume that protection against infection accounts for 7/9ths
+    of vaccine effectiveness against severe disease. The model is calibrated to 2024-25 season adult
+    and pediatric COVID hospital admissions and all-age mortality. Due to the low coverage in 
+    NHSN data for summer 2024, we substitute a proxy based on emergency room data.  The proxy data
+    is used only for weeks where the NHSN data has low reporting, and is given a lower weight
+    in the optimization objective function.
+    The observed dual seasonality of COVID is
+    accounted for using a flexible time-dependent transmission term. 
+    Calibration parameters align closely to scenario D. 
+    Additionally, calibration includes a preference for periodic/quasi-periodic trajectories. 
+    Calibration is a two-stage process.  The first stage uses a traditional optimizer to find a
+    centroid for the hyper-cube used in the second stage. In addition to normal optimization 
+    parameters (Beta(t), I(0), S(0), etc), the first stage optimizes vaccine effectiveness 
+    parameters.  Because the population starts with mixed levels of susceptibility, the VE 
+    parameters require tuning for the model to exhibit the expected VE of 45%.
+    National trajectories are calculated as
+    the sum of states using semi-randomly ordered state level trajectories.  This ordering 
+    essentially assumes some coherence in timing across the summed state trajectories.
+model_version: "1.0"
+website_url: "https://predsci.com/usa-flu-hosp/"
+team_funding: "Atlantic Coast Center for Infectious Disease Dynamics and Analytics (ACCIDDA) "
+data_inputs: >
+    Pediatric and adult hospital admissions (both as-reported by NHSN, and a proxy based on ED data), 
+    all-age mortality (NCHS). Proxy hospitalization data was obtained from the Center for Forecasting and Outbreak 
+    Analytics (CFA), Scenario Modeling Group, by private communication.  All other data sources are
+    publicly available.
+
+  
