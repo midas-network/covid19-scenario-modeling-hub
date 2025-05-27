@@ -104,16 +104,13 @@ df_nhsn <- extract_nhsn(hosp_report = TRUE, pathogen = "COVID") |>
   standard_nhsn(location2number, abbr2location) |>
   dplyr::mutate(target = "inc hosp")
 
-# Store previous version in the Archive ----------------------------------------
-old_files <- "target-data/time-series.csv"
-arch_files <-
-  gsub(".csv", paste0("_", Sys.Date(), ".csv"),
-       paste0("./auxiliary-data/", gsub("get-data", "get-data_archive",
-                                      old_files)))
-file.rename(old_files, arch_files)
-
 # Write output -----------------------------------------------------------------
 write.csv(rbind(df_death, df_nhsn), "target-data/time-series.csv",
+          row.names = FALSE)
+
+write.csv(rbind(df_death, df_nhsn),
+          paste0("auxiliary-data/target-data_archive/time-series_", Sys.Date(),
+                 ".csv"),
           row.names = FALSE)
 
 # Clean environment ------------------------------------------------------------
