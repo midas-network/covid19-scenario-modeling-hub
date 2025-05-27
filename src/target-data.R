@@ -108,7 +108,7 @@ df_nhsn <- extract_nhsn(hosp_report = TRUE, pathogen = "COVID") |>
 old_files <- "target-data/time-series.csv"
 arch_files <-
   gsub(".csv", paste0("_", Sys.Date(), ".csv"),
-       paste0("auxiliary-data/", gsub("get-data", "get-data_archive",
+       paste0("./auxiliary-data/", gsub("get-data", "get-data_archive",
                                       old_files)))
 file.rename(old_files, arch_files)
 
