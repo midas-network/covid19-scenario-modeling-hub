@@ -599,7 +599,6 @@ University of Pittsburgh.
 -   Shaun Truelove, Johns Hopkins University
 -   Claire Smith, Johns Hopkins University
 -   Emily Howerton, Penn State University
--   Nick Reich, University of Massachussetts at Amherst
 -   Harry Hochheiser, University of Pittsburgh
 -   Michael Runge, USGS
 -   Lucie Contamin, University of Pittsburgh
@@ -621,3 +620,4 @@ University of Pittsburgh.
 -   Michelle Qin, Harvard University
 -   Tiffany Bogich, Penn State University
 -   Rebecca Borchering, Penn State University
+-   Nick Reich, University of Massachussetts at Amherst
