@@ -610,6 +610,7 @@ University of Pittsburgh.
 -   Sung-mok Jung, University of North Carolina
 -   Samantha Bents, NIH Fogarty
 -   Katie Yan, Penn State University
+-   Hidetoshi Inamine, Penn State University
 
 ### Past members
 
