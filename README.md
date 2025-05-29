@@ -533,6 +533,64 @@ The Scenario Modeling Hub site is supported by the MIDAS Coordination Center,
 NIGMS Grant U24GM132013 (2019-2024) and R24GM153920 (2024-2029) to the
 University of Pittsburgh.
 
+## Teams and models
+
+- [*CDC Center for Forecasting and Outbreak Analytics --- Scenarios*](model-metadata/CFA-Scenarios.yaml)
+    - Laura Albrecht (CDC Center for Forecasting and Outbreak Analytics),
+      Elisha Are (CDC Center for Forecasting and Outbreak Analytics),
+      Michael Batista (CDC Center for Forecasting and Outbreak Analytics),
+      Ariel Shurygin (CDC Center for Forecasting and Outbreak Analytics),
+      Kok Ben Toh (CDC Center for Forecasting and Outbreak Analytics),
+      Thomas Hladish (CDC Center for Forecasting and Outbreak Analytics)
+
+- [* Johns Hopkins University and University of North Carolina at Chapel Hill --- Flexible Epidemic Modeling Pipeline*](model-metadata/JHU_UNC-flepiMoP.yaml)
+    - Anjalika Nande (Institute for Computational Medicine, Johns Hopkins University),
+      Sara Loo (Department of International Health, Johns Hopkins University),
+      Joseph Lemaitre (Department of Epidemiology, Gillings School of Global Public Health, 
+      University of North Carolina at Chapel Hill),
+      Timothy Willard (Department of Epidemiology, Gillings School of Global Public Health, 
+      University of North Carolina at Chapel Hill),
+      Carl Pearson (Department of Epidemiology, Gillings School of Global Public Health, 
+      University of North Carolina at Chapel Hill),
+      Alison Hill (Institute for Computational Medicine, Johns Hopkins University),
+      Justin Lessler (Department of Epidemiology, Gillings School of Global Public Health, 
+      University of North Carolina at Chapel Hill),
+      Shaun Truelove (Department of International Health, Johns Hopkins University)
+
+- [* MOBS Lab at Northeastern University --- GLEAM COVID-19 Model*](model-metadata/MOBS_NEU-GLEAM_COVID.yml)
+    - Alessandro Vespignani (MOBS Lab, Northeastern University),
+      Matteo Chinazzi (The Roux Institute, Northeastern University),
+      Jessica T. Davis (MOBS Lab, Northeastern University)
+
+- [* Predictive Science Inc --- Mechanistic SARS-CoV-2 compartmental model designed for round 19*](model-metadata/PSI-M_CoV_2025.yaml)
+    - Turtle J (Predictive Science),
+      Ben-Nun M (Predictive Science),
+      Riley P (Predictive Science)
+
+- [* University of Illinois, Urbana-Champaign --- UIUC-IMMCYC*](model-metadata/UIUC-IMMCYC.yaml)
+    - Sophie L Larsen (University of Illinois at Urbana-Champaign)
+
+- [* UNC Charlotte --- Hierbin Hybrid*](model-metadata/UNCC-Hierbin.yaml)
+    - Shi Chen (UNC Charlotte),
+      Daniel Janies (UNC Charlotte),
+      Rajib Paul (UNC Charlotte)
+
+- [* University of Texas at Austin --- UT-ImmunoSEIRS*](model-metadata/UT-ImmunoSEIRS.yaml)
+    - Shraddha Ramdas Bandekar (The University of Texas at Austin),
+      Kaiming Bi (University of Texas Health Science Center School of Public Health),
+      Anass Bouchnita (The University of Texas at El Paso),
+      Spencer J. Fox (The University of Georgia),
+      Lauren Ancel Meyers (The University of Texas at Austin)
+
+- [* UVA Biocomplexity Institute --- adaptive*](model-metadata/UVA-adaptive.yaml)
+    - Przemyslaw Porebski (UVA),
+      Srinivasan Venkatramanan (UVA),
+      Bryan Lewis (UVA),
+      Aniruddha Adiga (UVA),
+      Jiangzhuo Chen (UVA),
+      Madhav Marathe (UVA)
+
+
 ## The COVID-19 Scenario Modeling Hub Coordination Team
 
 -   Justin Lessler, University of North Carolina
