@@ -61,6 +61,7 @@ campaign, with a start on Aug 15, 2025. This is the timing that was observed in 
 consider hypothetical scenarios C and E, where vaccination is pushed 1.5 month 
 earlier and starts on June 29, 2025 (meaning that the entire vaccine manufacturing 
 and delivery process is moved earlier in time). These hypothetical scenarios may be 
+useful to project the potential value of earlier vaccination campaigns in future 
 COVID19 seasons, in light of substantial summer waves of COVID-19 observed in 
 recent years.  Vaccine coverage curves is provided for all scenarios and reflects 
 the stipulated timing of vaccination in each scenario (available in the 
