@@ -16,6 +16,7 @@ jobs:
               .github
               src
               auxiliary-data/data-locations
+              auxiliary-data/target-data_archive
               target-data
 
     - uses: r-lib/actions/setup-r@v2

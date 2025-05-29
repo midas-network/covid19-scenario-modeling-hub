@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6584489.svg)](https://doi.org/10.5281/zenodo.6584489)
 
-Last updated: 2025-04-02 for **Round 19 Scenarios**.
+Last updated: 2025-05-29 for **Round 19 Scenarios**.
 
 ## Previous Round Scenarios and Results:
 
@@ -110,7 +110,7 @@ April 27, 2025 to Sat April 25, 2026 (52 weeks).
 In all scenarios, boosters are expected to match the predominant variants 
 circulating on June 30, 2025.  **Teams should use VE against COVID-19 
 hospitalization = 45% at the start of the vaccination campaign (either 
-July 15 or Sep 1, 2025)**, in line with a 
+June 29 or August 15, 2025)**, in line with a 
 [recent US](https://www.cdc.gov/mmwr/volumes/74/wr/mm7406a1.htm) analysis 
 of hospitalizations during September-December 2024. We note that in this 
 study, VE against hospitalization was similar 0-2 vs 3-4 months after 
@@ -134,10 +134,10 @@ in the range 35-57% at the start of the vaccination campaign (see
 for detailed studies).
 
 Two mechanisms will result in an effective decrease from the stated VE of 45% 
-against hospitalization.  The first mechanism is immune escape, with circulating 
-strains moving gradually away from the vaccine. In this round, immune escape 
-against infection and severe disease is at teams’ discretion (we return to this 
-later).
+against hospitalization at the start of the vaccination campaign. The first 
+mechanism is immune escape, with circulating strains moving gradually away 
+from the vaccine. In this round, immune escape against infection and severe 
+disease is at teams’ discretion (we return to this later).
 
 The second mechanism is waning of immunity against infection, due to decline in 
 immune responses over time. This applies to both vaccine-induced and natural 
@@ -152,15 +152,15 @@ should wane at slower timescale than against infection).
 
 In this round, we consider two different timings of vaccination. Scenarios B and 
 D correspond to a “classic” timing of initiation of the seasonal vaccination 
-campaign, with a start on Sep 1, 2025. This is the timing that is expected to 
-operate in the 2025-26 season. We also consider hypothetical scenarios C and E, 
-where vaccination is pushed 1.5 month earlier and starts on July 15, 2025 (meaning 
-that the entire vaccine manufacturing and delivery process is moved earlier in time). 
-These hypothetical scenarios may be useful to project the potential value of earlier 
-vaccination campaigns in future COVID19 seasons, in light of substantial summer 
-waves of COVID-19 observed in recent years.  Vaccine coverage curves is 
-provided for all scenarios and reflects the stipulated timing of vaccination 
-in each scenario (available in the 
+campaign, with a start on Aug 15, 2025. This is the timing that was observed in the
+2024-25 season and which is expected to operate in the 2025-26 season. We also 
+consider hypothetical scenarios C and E, where vaccination is pushed 1.5 month 
+earlier and starts on June 29, 2025 (meaning that the entire vaccine manufacturing 
+and delivery process is moved earlier in time). These hypothetical scenarios may be 
+useful to project the potential value of earlier vaccination campaigns in future 
+COVID19 seasons, in light of substantial summer waves of COVID-19 observed in 
+recent years.  Vaccine coverage curves is provided for all scenarios and reflects 
+the stipulated timing of vaccination in each scenario (available in the 
 [auxiliary-data/vaccination-coverage](./auxiliary-data/vaccination-coverage/) folder).
 
 
@@ -196,8 +196,9 @@ underlying conditions putting them at increased risk of severe outcomes from COV
 Data on the population size and vaccine coverage of high and low risk groups is provided 
 by state and age in GitHub. Teams can choose to adjust VE for high-risk and low-risk 
 groups based on available evidence, although the population-level average VE against 
-hospitalization should equal 45% on September 1. Data on increased risk of COVID-19 
-hospitalization from high risk groups can be found 
+hospitalization should equal 45% at the start of the vaccination campaign (ie, on August 
+15 for scenarios B and D and on June 29 for scenarios C and E). Data on increased risk of 
+COVID-19 hospitalization from high risk groups can be found 
 [here](https://academic.oup.com/cid/article/72/11/e695/5908300). If teams wish to 
 adjust VE based on specific risk conditions, they can refer to data on VE in 
 immunocompromised populations 
