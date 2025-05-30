@@ -568,7 +568,8 @@ University of Pittsburgh.
       Riley P (Predictive Science)
 
 - [*University of Illinois, Urbana-Champaign --- UIUC-IMMCYC*](model-metadata/UIUC-IMMCYC.yaml)
-    - Sophie L Larsen (University of Illinois at Urbana-Champaign)
+    - Soren L Larsen (Program in Ecology, Evolution, and Conservation Biology, University of Illinois 
+    at Urbana-Champaign, Urbana, IL, USA)
 
 - [*UNC Charlotte --- Hierbin Hybrid*](model-metadata/UNCC-Hierbin.yaml)
     - Shi Chen (UNC Charlotte),
