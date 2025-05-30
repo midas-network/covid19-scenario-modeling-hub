@@ -4,8 +4,8 @@ model_name: "UIUC-IMMCYC"
 model_abbr: "IMMCYC"
 model_contributors: [
   {
-    "name": "Sophie L Larsen",
-    "affiliation": "University of Illinois at Urbana-Champaign",
+    "name": "Soren L Larsen",
+    "affiliation": "Program in Ecology, Evolution, and Conservation Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA",
     "email": "sll4@illinois.edu"
   }
 ]
