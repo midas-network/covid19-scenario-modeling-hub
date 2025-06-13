@@ -55,6 +55,12 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
                                gh_token)
     stop(msg)
   }
+  if (grepl("Ensemble", x)) {
+    return(list(err = FALSE,
+                msg = paste0(basename(x), " seems to be an Ensemble file",
+                             " - validation not run")))
+  }
+
   val_param <- val_param[[round_id]]
   # partition validation
   if (length(unlist(strsplit(x, "/"))) > 2) {
