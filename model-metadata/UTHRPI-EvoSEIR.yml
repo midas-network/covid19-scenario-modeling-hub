@@ -1,0 +1,34 @@
+team_name: "University of Texas Health Science Center at Houston - Rensselaer Polytechnic Institute"
+team_abbr: "UTHRPI"
+model_name: "Evolutionary SEIR model"
+model_abbr: "EvoSEIR"
+model_version: "1.0"
+model_contributors: [
+  {
+    "name": "Boya Peng",
+    "affiliation": "University of Texas Health Science Center at Houston",
+    "email": "boya.peng@uth.tmc.edu"
+  },
+  {
+    "name": "Junfeng Wu",
+    "affiliation": "Rensselaer Polytechnic Institute",
+    "email": "wuj26@rpi.edu"
+  },
+  {
+    "name": "Yinan Wang",
+    "affiliation": "Rensselaer Polytechnic Institute",
+    "email": "wangy88@rpi.edu"
+  },
+  {
+    "name": "Kaiming Bi",
+    "affiliation": "University of Texas Health Science Center at Houston",
+    "email": "kaiming.bi@uth.tmc.edu"
+  },
+]
+website_url: "https://sph.uth.edu/research/research-labs/?lab=g8vTJBgwLwerFNWhWxkTJw=="
+license: "cc-by-4.0"
+citation: ""
+team_funding: ""
+data_inputs: "CDC weekly incident COVID-19 hospitalization surveillance; RD20 vaccination coverage curves by age/risk group; population-weighted absolute humidity (NOAA-derived, CONUS excl. AK/HI); circulating-variant frequency and immune-escape estimates for LP.8.1, XFG, XFG.1.1 lineages."
+methods: "Risk-stratified (high/low-risk) two-strain SEIR model with waning natural and vaccine-derived immunity, humidity-driven seasonal transmission, and epoch-based variant replacement, calibrated via differential evolution against observed national hospitalizations."
+methods_long: "The model is a deterministic, daily-time-step compartmental SEIR-type model partitioning the US population into HIGH and LOW risk groups, each further split by infection history (naive vs. previously infected/vaccinated) and by circulating strain (A vs. B, representing sequential variant epochs: LP.8.1 -> XFG -> XFG.1.1). Force of infection uses homogeneous mixing across risk groups scaled by a humidity-driven seasonal transmission multiplier (population-weighted absolute humidity, excl. AK/HI). Vaccination is introduced as a weekly dose flow (held constant within each reporting week) split between risk groups per RD20 scenario-specific coverage curves. Natural and vaccine-derived immunity wane over time (fixed half-life), with partial (vs. full) protection against reinfection governed by a re-protection fraction. Severity (hospitalization) is risk-group- and vaccination/prior-infection-status-specific (IHR modified by a immune escape). Free parameters (transmission rate beta, humidity sensitivity alpha, initial conditions) were jointly calibrated via differential evolution against observed national weekly hospitalizations."

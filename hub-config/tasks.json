@@ -56,7 +56,7 @@
                 "target": "inc death"
               },
               "description": "Weekly new deaths due to COVID-19 as reported by state and local departments of public health and aggregated in the NCHS data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -72,7 +72,7 @@
                 "target": "inc hosp"
               },
               "description": "Weekly newly reported hospitalizations where the patient has COVID-19, as reported by hospital facilities and aggregated in the HHS Protect data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -88,7 +88,7 @@
                 "target": "cum death"
               },
               "description": "Weekly cumulative deaths due to COVID-19 since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -104,7 +104,7 @@
                 "target": "cum hosp"
               },
               "description": "Weekly cumulative reported hospitalizations where the patient has COVID-19, since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -172,7 +172,7 @@
                 "target": "inc death"
               },
               "description": "Weekly new deaths due to COVID-19 as reported by state and local departments of public health and aggregated in the NCHS data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -188,7 +188,7 @@
                 "target": "inc hosp"
               },
               "description": "Weekly newly reported hospitalizations where the patient has COVID-19, as reported by hospital facilities and aggregated in the HHS Protect data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -204,7 +204,7 @@
                 "target": "cum death"
               },
               "description": "Weekly cumulative deaths due to COVID-19 since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -220,7 +220,7 @@
                 "target": "cum hosp"
               },
               "description": "Weekly cumulative reported hospitalizations where the patient has COVID-19, since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -300,7 +300,7 @@
                 "target": "inc death"
               },
               "description": "Weekly new deaths due to COVID-19 as reported by state and local departments of public health and aggregated in the NCHS data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -316,7 +316,7 @@
                 "target": "inc hosp"
               },
               "description": "Weekly newly reported hospitalizations where the patient has COVID-19, as reported by hospital facilities and aggregated in the HHS Protect data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -332,7 +332,7 @@
                 "target": "cum death"
               },
               "description": "Weekly cumulative deaths due to COVID-19 since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -348,7 +348,7 @@
                 "target": "cum hosp"
               },
               "description": "Weekly cumulative reported hospitalizations where the patient has COVID-19, since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -416,7 +416,7 @@
                 "target": "inc death"
               },
               "description": "Weekly new deaths due to COVID-19 as reported by state and local departments of public health and aggregated in the NCHS data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -432,7 +432,7 @@
                 "target": "inc hosp"
               },
               "description": "Weekly newly reported hospitalizations where the patient has COVID-19, as reported by hospital facilities and aggregated in the HHS Protect data collection system.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -448,7 +448,7 @@
                 "target": "cum death"
               },
               "description": "Weekly cumulative deaths due to COVID-19 since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
@@ -464,7 +464,7 @@
                 "target": "cum hosp"
               },
               "description": "Weekly cumulative reported hospitalizations where the patient has COVID-19, since the beginning of the simulation.",
-              "target_type": "discrete",
+              "target_type": "continuous",
               "is_step_ahead": true,
               "time_unit": "week",
               "additional_metadata": {
