@@ -8,6 +8,9 @@ on:
       - 'model-output/**.parquet'
       - 'model-metadata/*'
       - '!**README**'
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
     validates-files:
