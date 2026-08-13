@@ -55,6 +55,7 @@ jobs:
 
         - name: Run Validation - Open/reopen
           if: ( github.event.action != 'synchronize' )
+          continue-on-error: true
           run: |
             R -e 'source("src/validation.R")
                   pr_validate(Sys.getenv("GITHUB_REPOSITORY"),
@@ -63,6 +64,7 @@ jobs:
 
         - name: Run Validation - Synchronize
           if: ( github.event.action == 'synchronize' )
+          continue-on-error: true
           run: |
             R -e 'source("src/validation.R")
                   pr_validate(Sys.getenv("GITHUB_REPOSITORY"),
@@ -73,10 +75,12 @@ jobs:
             GH_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
 
         - name: Record which PR this belongs to
+          if: always()
           run: |
             echo "${{ github.event.pull_request.number }}" > pr_number.txt
 
         - name: Upload result as artifact
+          if: always()
           uses: actions/upload-artifact@v4
           with:
             name: pr-comment
