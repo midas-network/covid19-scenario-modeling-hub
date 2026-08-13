@@ -31,7 +31,7 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run: |
-            R -e 'body <- readLines("comment.txt")
+            R -e 'body <- paste(readLines("comment.txt"), collapse = "\n")
                   pr_number <- readLines("pr_number.txt")
                   repo_parts <- strsplit(Sys.getenv("GITHUB_REPOSITORY"), "/")[[1]]
 
