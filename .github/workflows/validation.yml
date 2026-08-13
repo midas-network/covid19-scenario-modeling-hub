@@ -54,7 +54,7 @@ jobs:
             GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Run Validation - Open/reopen
-          id: validation_run
+          id: validation_open
           if: ( github.event.action != 'synchronize' )
           continue-on-error: true
           run: |
@@ -64,7 +64,7 @@ jobs:
                               Sys.getenv("GH_TOKEN"))'
 
         - name: Run Validation - Synchronize
-          id: validation_run
+          id: validation_sync
           if: ( github.event.action == 'synchronize' )
           continue-on-error: true
           run: |
@@ -92,7 +92,7 @@ jobs:
             retention-days: 1
 
         - name: Fail if error in validation
-          if: steps.validation_run.outcome == 'failure'
+          if: steps.validation_open.outcome == 'failure' || steps.validation_sync.outcome == 'failure'
           run: exit 1
 
 
