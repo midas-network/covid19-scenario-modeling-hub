@@ -1,6 +1,6 @@
 name: Validate
 on:
-  pull_request_target:
+  pull_request:
     types: [synchronize, opened, reopened]
     branches:
       - main
@@ -19,7 +19,7 @@ jobs:
 
         steps:
         - name: Checkout repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v6
           with:
             ref: ${{ github.event.pull_request.head.sha }}
             fetch-depth: 1
