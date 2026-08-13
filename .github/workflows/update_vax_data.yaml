@@ -2,8 +2,6 @@ name: Download COVID-19 Vaccine Coverage
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 9 * * 1'
 
 jobs:
   update-rsv-data:
