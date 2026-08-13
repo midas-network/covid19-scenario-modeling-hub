@@ -21,20 +21,11 @@ jobs:
             run-id: ${{ github.event.workflow_run.id }}
             github-token: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Setup R
-          uses: r-lib/actions/setup-r@v2
-
-        - name: Install gh package
-          run: Rscript -e 'install.packages("gh")'
-
         - name: Post comment on PR
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run: |
-            R -e 'body <- paste(readLines("comment.txt"), collapse = "\n")
-                  pr_number <- readLines("pr_number.txt")
-                  repo_parts <- strsplit(Sys.getenv("GITHUB_REPOSITORY"), "/")[[1]]
-
-                  gh::gh("POST /repos/{owner}/{repo}/issues/{issue_number}/comments",
-                         owner = repo_parts[1], repo = repo_parts[2],
-                         issue_number = pr_number, body = body)'
+            PR_NUMBER=$(cat pr_number.txt)
+            gh pr comment "$PR_NUMBER" \
+              --repo "${{ github.repository }}" \
+              --body-file comment.txt
