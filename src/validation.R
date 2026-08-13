@@ -150,8 +150,8 @@ pr_validate <- function(repo_name, gh_pr_number, gh_commit_sha, hub_path,
                      msg = "No model output submission files update")
   }
   if (post_msg) {
-    pr_mess <- c(pr_mess, purrr::map(test_mod, "msg"))
-    pr_mess <- paste(pr_mess, collapse = "\n --- \n\n")
+    pr_mess <- c(pr_mess, purrr::map(test_mod, "msg")) |> purrr::compact()
+    pr_mess <- paste(pr_mess, collapse = "\n\n")
     writeLines(pr_mess, paste0("comment.txt"))
   }
   # Results
