@@ -43,9 +43,9 @@ compartments) plus hospitalization and death pathways.
 ### Initial distribution of susceptibility (if available)
 Initial conditions are seeded from a preprocessed per-jurisdiction immune-ladder
 prior and redistributed across the ladder rungs, then the model is run through a
-multi-year burn-in (simulation start 2022-07-03, with the likelihood beginning
-after an initial burn-in) so that the initial-condition assumptions are largely
-washed out before the calibration and projection windows.
+short burn-in (simulation start 2023-01-01, with the likelihood beginning after
+an initial multi-week burn-in) so that the initial-condition assumptions are
+largely washed out before the calibration and projection windows.
 
 ### Initial variant characteristics (transmissibility of variants at t=0, and how uncertainty or non-identifiability was handled)
 Distinct variants are not tracked explicitly; instead antigenic change is
@@ -53,7 +53,7 @@ represented by a continuous immune-escape process. Baseline transmissibility is
 parameterized through a per-contact transmission scale and a
 location-hierarchical seasonal R0(t); its uncertainty and partial
 non-identifiability against seasonality and reporting are handled by full
-Bayesian inference (a structured variational posterior) rather than point
+Bayesian inference (a mean-field variational posterior) rather than point
 estimates.
 
 ### Details about calibration of immunity at t=0 (calibration period considered, assumptions about/fitting of past immune escape and waning immunity, is the same calibration process used for all scenarios?)
@@ -83,10 +83,13 @@ protection declines toward, but is bounded by, a fitted susceptibility plateau.
 ### Assumptions regarding waning immunity against severe disease (including whether immunity against severe disease, conditional on infection, is fixed vs declines over time; and if it wanes, specify how)
 Protection against severe disease is modeled primarily through protection
 against infection (ladder position) plus a vaccination-status severity
-reduction. The vaccination-conditional severity reduction is treated as fixed
-(it does not wane on its own), so declining protection against severe outcomes
-over time arises from waning/escape acting on the infection pathway and from
-individuals leaving the vaccinated state.
+reduction. The vaccination-conditional severity reduction wanes over time:
+vaccinated individuals return to the unvaccinated state at an inferred per-capita
+rate (a protection duration on the order of several months), so vaccine-derived
+protection against severe outcomes erodes smoothly after each dose rather than
+persisting until a fixed annual reset. Declining protection against severe
+outcomes over time therefore arises from this severity-protection waning together
+with waning/escape acting on the infection pathway.
 
 ### Assumptions regarding boosting effect from multiple infections
 Repeated infections boost immunity only through the ladder mechanism: each
@@ -149,12 +152,12 @@ climate covariate is used); a slow secular trend and time-varying coefficients
 are separated from the annual cycle.
 
 ### What is the calibration period used to fit the model? Are there any adjustments made to the reported NHSN hospitalization data?
-The model is fit to data from mid-2022 through the most recent available week
+The model is fit to data from early 2023 through the most recent available week
 (with a burn-in before the likelihood window). NHSN hospitalization data are
-used as provided; the May-October 2024 voluntary-reporting dip is handled by
-down-weighting recent-vs-older weeks through the likelihood recency weighting
-rather than by editing the reported values, and no reporting-coverage inflation
-factor was applied for this submission.
+used as provided; on the May-October 2024 voluntary-reporting weeks (when
+hospitalizations are largely unreported) the death signal is up-weighted so that
+deaths pin the trajectory, rather than editing the reported values, and no
+reporting-coverage inflation factor was applied for this submission.
 
 ### Details about modeling of age-specific outcomes, including assumptions on age-specific parameters (e.g., susceptibility, infection hospitalization risk or fatality risk, VE)
 Age is continuous. Infection-hospitalization and infection-fatality risks are
@@ -201,8 +204,11 @@ include: a continuous-age formulation with a parametric age-age contact kernel
 location-hierarchical low-order Fourier seasonality with non-centered partial
 pooling and a separated secular trend (replacing monthly seasonal terms); a
 continuous immune-escape envelope; and fully Bayesian inference by stochastic
-variational inference with a structured low-rank multivariate-normal guide
-(warm-started from MAP and a Laplace approximation), with LogNormal-on-rates
-observation models and first-order autoregressive residual correlation
-(phi ~ 0.92 for hospitalizations, ~ 0.80 for deaths). Severity is age-resolved
+variational inference with a mean-field (AutoNormal) guide
+(warm-started from MAP and a Laplace approximation), with negative-binomial
+count observation models and first-order autoregressive residual correlation
+(phi ~ 0.92 for hospitalizations, ~ 0.80 for deaths). A structural refinement
+this round lets the vaccination-conditional severity protection wane continuously
+(vaccinees return to the unvaccinated state at an inferred rate) rather than
+resetting at a fixed annual date. Severity is age-resolved
 with hierarchical per-jurisdiction multipliers and slow time trends.
