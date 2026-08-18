@@ -51,8 +51,10 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
   if (!(round_id %in% names(val_param))) {
     msg <- paste0("The round id in the submission file was not recognized, ",
                   "please verify")
-    if (post_msg) post_message(list("msg" = msg), repo_name, gh_pr_number,
-                               gh_token)
+    if (post_msg) {
+      msg <- paste(msg, collapse = "\n\n")
+      writeLines(msg, paste0("comment.txt"))
+    }
     stop(msg)
   }
   if (grepl("Ensemble", x)) {
@@ -66,8 +68,10 @@ validate_model_output <- function(x, repo_name, gh_pr_number, gh_token,
     if (!"partition" %in% names(val_param)) {
       msg <- paste0("The model output file seems to be partitioned, partition",
                     "not accepted for this round, please verify")
-      if (post_msg) post_message(list("msg" = msg), repo_name, gh_pr_number,
-                                 gh_token)
+      if (post_msg) {
+        msg <- paste(msg, collapse = "\n\n")
+        writeLines(msg, paste0("comment.txt"))
+      }
       stop(msg)
     }
     x_path <- dirname(x)
