@@ -136,7 +136,7 @@ pr_validate <- function(repo_name, gh_pr_number, gh_commit_sha, hub_path,
   } else {
     test_meta <-  list(err = FALSE, msg = "No metadata files update")
   }
-  if (post_msg) pr_mess <- c(pr_mess, list(test_meta$msg))
+  if (post_msg) pr_mess <- c(pr_mess, purrr::map(test_meta, "msg"))
   # Model output
   if (any(grepl("model-output/", unique(pr_filenames)))) {
     mod_files <- extract_files(pr_files, "model-output/", commit = commit)
