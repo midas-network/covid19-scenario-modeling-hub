@@ -50,7 +50,7 @@ rm(j)
 
 # Seasons information
 season_json <-
-  "https://gis.cdc.gov/grasp/flu7/GetPhase07InitApp?appVersion=Public"
+  "https://gis.cdc.gov/flu7/GetPhase07InitApp?appVersion=Public"
 seasons_info <- jsonlite::fromJSON(season_json)
 seasons_info <- dplyr::filter(seasons_info$seasons, grepl("202.|2019", label))
 
@@ -71,7 +71,7 @@ headers <- c(`authority` = "gis.cdc.gov",
              `content-type` = "application/json;charset=UTF-8",
              `origin` = "https://gis.cdc.gov",
              `pragma` = "no-cache",
-             `referer` = "https://gis.cdc.gov/grasp/fluview/mortality.html",
+             `referer` = "https://gis.cdc.gov/fluview/mortality.html",
              `sec-ch-ua` = paste0('"Google Chrome";v="111", ',
                                   '"Not(A:Brand";v="8", "Chromium";v="111"'),
              `sec-ch-ua-mobile` = "?0",
@@ -86,7 +86,7 @@ state_fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":2}],',
 fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":1}],',
                   '"SeasonsParameters":[', seasons_param,
                   '],"AgegroupsParameters":[{"ID":1}]}')
-url <- "https://gis.cdc.gov/grasp/flu7/PostPhase07DownloadData"
+url <- "https://gis.cdc.gov/flu7/PostPhase07DownloadData"
 
 # Add NY City for COVID-19 Death data (source FluView)
 number2location <- c(number2location, setNames("New York City", 57))
