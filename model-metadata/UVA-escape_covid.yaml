@@ -1,0 +1,123 @@
+team_name: "UVA Biocomplexity Institute"
+team_abbr: "UVA"
+model_name: "ESCAPE-COVID"
+model_abbr: "escape_covid"
+model_version: "v1"
+model_contributors:
+  [
+    {
+      "name": "Bryan Lewis",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "brylew@virginia.edu",
+    },
+    {
+      "name": "Parantapa Bhattacharya",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "parantapa@virginia.edu",
+    },
+    {
+      "name": "Srinivasan Venkatramanan",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "srini@virginia.edu",
+    },
+    {
+      "name": "Aniruddha Adiga",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "aa5dw@virginia.edu",
+    },
+    {
+      "name": "Jiangzhuo Chen",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "chenj@virginia.edu",
+    },
+    {
+      "name": "Madhav Marathe",
+      "affiliation": "University of Virginia, Biocomplexity Institute",
+      "email": "marathe@virginia.edu",
+    },
+  ]
+website_url: "https://biocomplexity.virginia.edu/project/covid-19-pandemic-response"
+repo_url: "https://github.com/NSSAC/escape-covid19-smh"
+license: "cc-by-4.0"
+methods: "Full-population agent-based model on the EpiHiper synthetic population and activity-based contact network. Each agent carries its own infection, dose and vaccine-formulation clocks, so waning, immune escape and vaccine protection are continuous and individual rather than compartmental."
+methods_long: |
+  ESCAPE-COVID is a stochastic, full-population agent-based model run on the EpiHiper
+  synthetic population and its activity-based contact network (v2.4.0), built from census
+  microdata, activity surveys and land-use data. Every contact edge carries a duration, and
+  transmission uses a Wells-Riley dose response on that duration, so age heterogeneity in
+  infection arises from the network rather than from an age-specific susceptibility term.
+  Simulation runs at one-day ticks from 2025-05-25 to 2027-06-05; ticks 0-13 are a burn-in
+  dropped before the 2025-06-08 origin date.
+
+  Immunity is individual and continuous, not compartmental. Disease states are S, V, E, I, A,
+  H, D, R (V is a one-tick vaccination event rather than a protected class; A is asymptomatic
+  infectious; E is infectious at relative infectivity 0.4; R is a refractory pool with a
+  Normal(35,7)-day dwell that puts a ~39-day floor on reinfection). Protection is a function
+  of three per-agent clocks - last infection, last dose, and the dose's formulation date -
+  combining a waning term and an immune-escape term, evaluated at every susceptibility and
+  severity decision. Waning is exponential with a 5-month half-life against infection and a
+  slower 10-month half-life against severe disease given infection. Immune escape is
+  continuous at 35% per year, the midpoint of the round's suggested range, and multiplies both
+  susceptibility and severity protection. The escape clock is max(last infection, last vaccine
+  formulation), so a natural infection resets escape to the infection date while a dose only
+  resets it to that formulation's annual date. A new infection resets both clocks but does not
+  raise the protection ceiling; there is no explicit boosting from repeated exposure.
+
+  The initial condition is reconstructed per agent rather than fitted, and is identical across
+  all five scenarios so that scenarios are paired at t=0. NHSN weekly admissions back to 2023
+  are converted to infections through a fitted age-band infection-hospitalization ratio and
+  assigned to individuals as last-infection dates; vaccination history is sampled by state,
+  age and risk from the round's coverage curves; and each recent infection is then
+  forward-simulated through the model's own state machine so agents start mid-episode rather
+  than all in S. The 2024-05 to 2024-11 NHSN reporting gap is repaired tier-wise (state
+  authority backfill rescaled onto the NHSN level where available, otherwise a national donor
+  curve scaled to the state) with per-week provenance recorded; no adjustment is made to
+  reported NHSN data used for fitting.
+
+  Severity is applied in two stages. P(hospitalization) is a conditional hospitalization ratio
+  given a symptomatic case, applied at the I->H transition on a continuous 5-year age band
+  ladder derived from the CDC 2023 age rate-ratio shape, anchored to the observed NHSN 65+
+  admission share and fitted against the model's own realized infection age distribution.
+  Adults 18-64 are split by risk at a relative risk of 3 with the population-weighted mean
+  held at 1. P(death) is a case fatality ratio given hospitalization, time-varying by state,
+  month and age bucket, from a two-stage Bayesian hierarchical fit of the
+  hospitalization-to-death ratio, with a fitted 3-14 day hospital-to-death delay.
+
+  Seasonality is state-specific and additive on transmissibility, from an analytic two-wave
+  (summer and winter) day-of-year model fitted hierarchically to NHSN admissions across 51
+  jurisdictions. Only the seasonal shape is carried across, so the recent decline in
+  hospitalization burden is generated endogenously by accumulating immunity rather than being
+  double-counted in transmissibility. There are no NPIs and no imposed behaviour change; the
+  only time-varying transmission terms are seasonality and population immunity. Importation is
+  represented by a constant background introduction hazard (about 1% of infection events).
+
+  Vaccination is explicit at the dose level. Hub coverage curves are used as provided,
+  differenced on the rounded cumulative value and multiplied by synthetic-population stratum
+  denominators. Doses are campaign-tagged so an agent receives at most one dose per campaign.
+  Vaccination reduces susceptibility, and hence transmission indirectly, plus a separate
+  reduction in hospitalization given infection; there is no reduction of infectiousness given
+  a breakthrough infection. VE inputs are set above the round's nominal targets so that the
+  realized, exposure-matched effectiveness measured inside a run matches them (about 54%
+  against infection and 55% against hospitalization in the first months after a dose, decaying
+  to near zero by 9-12 months).
+
+  Uncertainty and spatial correlation. Spatial structure is explicit: the model simulates each
+  jurisdiction on its own synthetic population and contact network, so within-state spatial
+  correlation emerges from the network, but states are simulated independently and no
+  between-state coupling or commuting is represented. The US series is the per-sample sum of
+  the state trajectories. Replicates differ only by random seed - there is no parameter
+  ensemble - so the reported quantiles describe stochastic spread alone and understate true
+  projection uncertainty; they should not be read as predictive intervals.
+
+  Known limitations. Admissions are too flat across age relative to observation (65+ share
+  runs below the observed share). Infections are concentrated in school-age children because
+  the contact network is activity-based. Deaths run below observed over the calibration
+  window. Waning is continuous to zero rather than to the 40-60% plateau the round suggests,
+  though the median waning time is inside the requested 3-10 month window. The spring
+  high-risk booster in scenarios C and E is not conditioned on having received a prior fall
+  dose, so fall and spring uptake are modelled as uncorrelated. High-risk status is drawn as
+  an independent Bernoulli at the state chronic-condition rate because the synthetic
+  population carries no comorbidity flag, so it reproduces the correct marginal but is
+  independent of age-within-band, household and network position.
+data_inputs: "NHSN Weekly Hospital Respiratory Data (incident hospitalizations, via the SMH target data); NCHS/FluView provisional COVID-19 deaths, national by age and by state; SMH Round 20 vaccination coverage curves by state, age and risk group; CDC age-specific severity rate ratios for hospitalization and death; EpiHiper synthetic population and activity-based contact network v2.4.0."
+citation: "University of Virginia Biocomplexity Institute. ESCAPE-COVID: an agent-based model of SARS-CoV-2 transmission and immunity on a synthetic population. 2026. https://github.com/NSSAC/escape-covid19-smh"
