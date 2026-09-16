@@ -624,26 +624,53 @@ University of Pittsburgh.
 ## Teams and models
 
 - [*CDC Center for Forecasting and Outbreak Analytics --- Scenarios*](model-metadata/CFA-Scenarios.yaml)
-    - Laura Albrecht (CDC Center for Forecasting and Outbreak Analytics),
-      Elisha Are (CDC Center for Forecasting and Outbreak Analytics),
-      Michael Batista (CDC Center for Forecasting and Outbreak Analytics),
-      Ariel Shurygin (CDC Center for Forecasting and Outbreak Analytics),
-      Kok Ben Toh (CDC Center for Forecasting and Outbreak Analytics),
-      Thomas Hladish (CDC Center for Forecasting and Outbreak Analytics)
+    - Nicholas Adams (CDC Center for Forecasting and Outbreak Analytics), 
+    Laura Albrecht (CDC Center for Forecasting and Outbreak Analytics), 
+    Elisha Are (CDC Center for Forecasting and Outbreak Analytics), 
+    Michael Batista (CDC Center for Forecasting and Outbreak Analytics), 
+    Thomas Hladish (CDC Center for Forecasting and Outbreak Analytics), 
+    Kok Ben Toh (CDC Center for Forecasting and Outbreak Analytics), 
+    Fuhan Yang (CDC Center for Forecasting and Outbreak Analytics)
 
 - [*Johns Hopkins University and University of North Carolina at Chapel Hill --- Flexible Epidemic Modeling Pipeline*](model-metadata/JHU_UNC-flepiMoP.yaml)
-    - Anjalika Nande (Institute for Computational Medicine, Johns Hopkins University),
-      Sara Loo (Department of International Health, Johns Hopkins University),
-      Joseph Lemaitre (Department of Epidemiology, Gillings School of Global Public Health, 
-      University of North Carolina at Chapel Hill),
-      Timothy Willard (Department of Epidemiology, Gillings School of Global Public Health, 
-      University of North Carolina at Chapel Hill),
-      Carl Pearson (Department of Epidemiology, Gillings School of Global Public Health, 
-      University of North Carolina at Chapel Hill),
-      Alison Hill (Institute for Computational Medicine, Johns Hopkins University),
-      Justin Lessler (Department of Epidemiology, Gillings School of Global Public Health, 
-      University of North Carolina at Chapel Hill),
-      Shaun Truelove (Department of International Health, Johns Hopkins University)
+    - Joshua Macdonald (Johns Hopkins University), 
+    Carl Pearson (University of North Carolina at Chapel Hill), 
+    Timothy Willard (University of North Carolina at Chapel Hill), 
+    Nhi Dinh (Johns Hopkins University), 
+    Emiliano Morales Lopez (Swarthmore College), 
+    Justin Lessler (University of North Carolina at Chapel Hill), 
+    Shaun Truelove (Johns Hopkins University)
+
+- [*PLANET Group at Northeastern University --- SIkJalpha*](/model-metadata//PLANET_NEU-SIkJalpha.yaml)
+	- Ajitesh Srivastava (Northeastern University)
+
+- [*UNC Charlotte --- Hierbin Hybrid*](model-metadata/UNCC-Hierbin.yaml)
+    - Shi Chen (UNC Charlotte),
+      Daniel Janies (UNC Charlotte),
+      Rajib Paul (UNC Charlotte)
+
+- [*University of Texas at Austin --- UT-ImmunoSEIRS*](model-metadata/UT-ImmunoSEIRS.yaml)
+    - Shraddha Ramdas Bandekar (The University of Texas at Austin), 
+    Kaiming Bi (University of Texas Health Science Center School of Public Health), 
+    Anass Bouchnita (The University of Texas at El Paso), 
+    Spencer J. Fox (North Arizona University), 
+    Lauren Ancel Meyers (The University of Texas at Austin)
+
+- [*University of Texas Health Science Center at Houston - Rensselaer Polytechnic Institute --- EvoSEIR*](model-metadata//UIUC-IMMCYC.yaml)
+	- Boya Peng (University of Texas Health Science Center at Houston), 
+	Junfeng Wu (Rensselaer Polytechnic Institute), 
+	Yinan Wang (Rensselaer Polytechnic Institute), 
+	Kaiming Bi (University of Texas Health Science Center at Houston)
+
+- [*UVA Biocomplexity Institute --- adaptive*](model-metadata/UVA-adaptive.yaml)
+    - Przemyslaw Porebski (UVA),
+      Srinivasan Venkatramanan (UVA),
+      Bryan Lewis (UVA),
+      Aniruddha Adiga (UVA),
+      Jiangzhuo Chen (UVA),
+      Madhav Marathe (UVA)
+
+### Past members
 
 - [*LEMMA (Part of the ACCIDDA center) --- DTW+Shape based Ensemble*](model-metadata/LEMMA-EnsembleDTWS.yaml)
     - Ajitesh Srivastava (University of Southern California)
@@ -662,33 +689,13 @@ University of Pittsburgh.
     - Soren L Larsen (Program in Ecology, Evolution, and Conservation Biology, University of Illinois 
     at Urbana-Champaign, Urbana, IL, USA)
 
-- [*UNC Charlotte --- Hierbin Hybrid*](model-metadata/UNCC-Hierbin.yaml)
-    - Shi Chen (UNC Charlotte),
-      Daniel Janies (UNC Charlotte),
-      Rajib Paul (UNC Charlotte)
-
-- [*University of Texas at Austin --- UT-ImmunoSEIRS*](model-metadata/UT-ImmunoSEIRS.yaml)
-    - Shraddha Ramdas Bandekar (The University of Texas at Austin),
-      Kaiming Bi (University of Texas Health Science Center School of Public Health),
-      Anass Bouchnita (The University of Texas at El Paso),
-      Spencer J. Fox (The University of Georgia),
-      Lauren Ancel Meyers (The University of Texas at Austin)
-
-- [*UVA Biocomplexity Institute --- adaptive*](model-metadata/UVA-adaptive.yaml)
-    - Przemyslaw Porebski (UVA),
-      Srinivasan Venkatramanan (UVA),
-      Bryan Lewis (UVA),
-      Aniruddha Adiga (UVA),
-      Jiangzhuo Chen (UVA),
-      Madhav Marathe (UVA)
-
 
 ## The COVID-19 Scenario Modeling Hub Coordination Team
 
+-   Shaun Truelove, Johns Hopkins University
+-   Cécile Viboud, NIH Fogarty
 -   Justin Lessler, University of North Carolina
 -   Katriona Shea, Penn State University
--   Cécile Viboud, NIH Fogarty
--   Shaun Truelove, Johns Hopkins University
 -   Claire Smith, Johns Hopkins University
 -   Emily Howerton, Penn State University
 -   Harry Hochheiser, University of Pittsburgh
@@ -696,12 +703,8 @@ University of Pittsburgh.
 -   Lucie Contamin, University of Pittsburgh
 -   John Levander, University of Pittsburgh
 -   Jessi Espino, University of Pittsburgh
--   Sara Loo, Johns Hopkins University
 -   Erica Carcelen, John Hopkins University
--   Sung-mok Jung, University of North Carolina
--   Samantha Bents, NIH Fogarty
 -   Katie Yan, Penn State University
--   Hidetoshi Inamine, Penn State University
 
 ### Past members
 
@@ -713,3 +716,8 @@ University of Pittsburgh.
 -   Tiffany Bogich, Penn State University
 -   Rebecca Borchering, Penn State University
 -   Nick Reich, University of Massachussetts at Amherst
+-   Sara Loo, Johns Hopkins University
+-   Sung-mok Jung, University of North Carolina
+-   Samantha Bents, NIH Fogarty
+-   Hidetoshi Inamine, Penn State University
+
