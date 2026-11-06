@@ -101,7 +101,7 @@ df_death <- standard_fluview(df_us, df_state, number2season,
 
 # NHSN Hospitalization Data ----------------------------------------------------
 df_nhsn <- extract_nhsn(hosp_report = TRUE, pathogen = "COVID") |>
-  standard_nhsn(location2number, abbr2location) |>
+  standard_nhsn(location2number, abbr2location, report_limit = NULL) |>
   dplyr::mutate(target = "inc hosp")
 
 # Store previous version in the Archive ----------------------------------------
