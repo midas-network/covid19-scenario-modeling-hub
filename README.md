@@ -543,6 +543,10 @@ since pandemic start).
 Weekly Hospital Respiratory Data (HRD) Metrics by Jurisdiction from
 the [National Healthcare Safety Network (NHSN)](https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/ua7e-t2fy/about_data) will be used for incidence hospitalization
 target. The data are weekly. 
+Starting Nov 8, 2026, all the data are included in the final version
+of the target-data. Previous to that date, only data associated with
+a reporting percent greater than 75% were included. The reporting
+threshold was removed on Nov 6, 2026. 
 
 ## Auxiliary Data
 
